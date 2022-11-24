@@ -1,0 +1,38 @@
+body, html{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background: linear-gradient(rgba(86, 171, 47, .6), rgba(168, 224, 99, .4)), url('img/bg.jpg');
+	background-size: cover;
+	background-position: center;
+	color: #14499B;
+}
+
+.logo {
+	height: 60px;
+	margin-top: 15px;
+}
+
+.text-description{
+	letter-spacing: 2px;
+	font-family: sans-serif;
+}
+
+.form-control{
+	background: transparent !important;
+	color:#14499B !important;
+}
+
+a .fab{
+	color: #fff;
+	font-size: 30px;
+	margin: 0 10px;
+}
+
+.redimension{
+	width: 650px;
+	height: 450px;
+}
