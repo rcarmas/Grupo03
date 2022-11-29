@@ -221,7 +221,7 @@ h6 {
 .nav-menu .active:focus,
 .nav-menu li:hover>a {
   color: #fff;
-  background: #0563bb;
+  background: green;
 }
 
 .nav-menu a:hover span,
@@ -1226,4 +1226,8 @@ section {
 
 #footer .credits {
   font-size: 13px;
+}
+
+.redimension{
+  height: 400px;
 }
