@@ -1227,3 +1227,7 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+
+.redimension{
+  height: 400px;
+}
