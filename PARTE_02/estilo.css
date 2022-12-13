@@ -1,0 +1,46 @@
+body, html{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body{
+	background: linear-gradient(rgba(0, 0, 70, .5), rgba(28, 121, 224, .4)), url('img/bg.jpg');
+	background-size: cover;
+	background-position: center;
+	color: #14499B;
+}
+
+.logo {
+	height: 70px;
+	margin-top: 15px;
+}
+
+.text-description{
+	letter-spacing: 2px;
+	font-family: sans-serif;
+}
+
+.form-control{
+	background: transparent !important;
+	color:#14499B !important;
+}
+
+a .fab{
+	color: #fff;
+	font-size: 30px;
+	margin: 0 10px;
+}
+
+.redimension{
+	width: 450px;
+	height: 400px;
+}
+
+h1, p{
+	color: orange;
+}
+
+ul{
+	color: lightgoldenrodyellow;
+}
