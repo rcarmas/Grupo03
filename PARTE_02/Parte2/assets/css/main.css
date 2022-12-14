@@ -364,13 +364,7 @@ section {
     visibility: hidden;
   }
 
-  .navbar .dropdown a:hover,
-  .navbar .dropdown .active,
-  .navbar .dropdown .active:focus,
-  .navbar .dropdown:hover>a {
-    color: var(--color-white);
-    background: var(--color-secondary);
-  }
+ 
 
   .navbar .dropdown ul {
     display: block;
