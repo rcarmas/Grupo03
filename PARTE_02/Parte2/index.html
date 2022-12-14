@@ -1,316 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title></title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
 
-  <title></title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+    <!-- Favicons -->
+    <link href="assets/img/favicon.ico" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.ico" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Variables CSS Files. Uncomment your preferred color scheme -->
+    <link href="assets/css/variables.css" rel="stylesheet">
+    <!-- <link href="assets/css/variables-blue.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/variables-orange.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/variables-purple.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
+    <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- Variables CSS Files. Uncomment your preferred color scheme -->
-  <link href="assets/css/variables.css" rel="stylesheet">
-  <!-- <link href="assets/css/variables-blue.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-green.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-orange.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-purple.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-red.css" rel="stylesheet"> -->
-  <!-- <link href="assets/css/variables-pink.css" rel="stylesheet"> -->
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
+    <!-- =======================================================
   * Template Name: HeroBiz - v2.3.1
   * Template URL: https://bootstrapmade.com/herobiz-bootstrap-business-template/
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
-</head>
+  </head>
 
-<body>
+  <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top" data-scrollto-offset="0">
-    <div class="container-fluid d-flex align-items-center justify-content-between">
+    <!-- ======= Header ======= -->
+    <header id="header" class="header fixed-top" data-scrollto-offset="0">
+      <div class="container-fluid d-flex align-items-center
+        justify-content-between">
 
-      <a href="../index.html" class="logo d-flex align-items-center scrollto me-auto me-lg-0">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1>JS HTML DOM<span>.</span></h1>
-      </a>
+        <a href="../index.html" class="logo d-flex align-items-center scrollto
+          me-auto me-lg-0">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1>JS HTML DOM<span>.</span></h1>
+        </a>
 
-      <nav id="navbar" class="navbar">
-        <ul>
+        <nav id="navbar" class="navbar">
+          <ul>
 
-          <li><a class="nav-link scrollto" href="index.html#onfocus">Animaciones DOM</a></li>
-          <li><a class="nav-link scrollto" href="index.html#eventos">Eventos DOM</a></li>
-          <li><a class="nav-link scrollto" href="index.html#eventlistener">Event Listener DOM</a></li>
-          <li><a class="nav-link scrollto" href="index.html#node">Node DOM</a></li>
-          <li><a class="nav-link scrollto" href="index.html#HTML">HTML</a></li>
-          <li><a class="nav-link scrollto" href="index.html#css">CSS</a></li>
-          <li><a class="nav-link scrollto" href="index.html#formulario">Formularios</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle d-none"></i>
-      </nav><!-- .navbar -->
+            <li><a class="nav-link scrollto" href="index.html#onfocus">Animaciones
+                DOM</a></li>
+            <li><a class="nav-link scrollto" href="index.html#eventos">Eventos
+                DOM</a></li>
+            <li><a class="nav-link scrollto" href="index.html#eventlistener">Event
+                Listener DOM</a></li>
 
-    </div>
-  </header><!-- End Header -->
-<p><br/></p><p><br/></p>
-  <main id="main">
-
-    <!-- ======= Introduccion Section ======= -->
-    <section id="introduccion" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>JS HTML DOM AVANZADO</h2>
-          <p>En este capítulo, combinaremos algunos otros métodos XML DOM importantes. Puede obtener más información sobre DOM XML en nuestro tutorial XML DOM.</p>
-        </div>
-
-        <!-- ======= On Focus Section ======= -->
-    <section id="onfocus" class="onfocus">
-      <div class="container-fluid p-0" data-aos="fade-up">
-
-        <div class="row g-0">
-          <div class="col-lg-6 video-play position-relative">
-            <a href="https://www.youtube.com/watch?v=b-ZWMiqsAeU" class="glightbox play-btn"></a>
-          </div>
-          <div class="col-lg-6">
-            <div class="content d-flex flex-column justify-content-center h-100">
-              <h3>Animaciones DOM</h3>
-              <ul>
-                <li><i class="bi bi-check-circle"></i>Todas las animaciones deben ser relativas a un elemento contenedor.</li>
-                <li><i class="bi bi-check-circle"></i>Las animaciones JavaScript se realizan programando cambios graduales en el estilo de un elemento.</li>
-                <li><i class="bi bi-check-circle"></i>Los cambios son llamados por un temporizador. Cuando el intervalo del temporizador es pequeño, la animación parece continua.</li>
-              </ul>
-              <a href="introduccion/index.html" class="read-more align-self-start"><span>Aprender Más</span><i class="bi bi-arrow-right"></i></a>
+            <div class="nav-item dropdown">
+              <a href="#" class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown">Más</a>
+              <div class="dropdown-menu position">
+                <li><a class="nav-link scrollto colorLetter"
+                    href="index.html#node">Node DOM</a></li>
+                <li><a class="nav-link scrollto colorLetter"
+                    href="index.html#HTML">Colecciones DOM</a></li>
+                <li><a class="nav-link scrollto colorLetter"
+                    href="index.html#css">Listas de nodos DOM</a></li>
+                <li><a class="nav-link scrollto colorLetter"
+                    href="index.html#formulario">Navegación DOM</a></li>
+              </div>
             </div>
-          </div>
-        </div>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle d-none"></i>
+        </nav><!-- .navbar -->
+
+
+
+
+
+
+
+
+
 
       </div>
-    </section><!-- End On Focus Section -->
-    </section><!-- End Introduccion Section -->
+    </header><!-- End Header -->
+    <p><br/></p><p><br/></p>
+        <main id="main">
 
-    <!-- ======= Eventos Section ======= -->
-    <section id="eventos" class="services">
-      <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-out">
+          <!-- ======= Introduccion Section ======= -->
+          <section id="introduccion" class="about">
+            <div class="container" data-aos="fade-up">
 
-        <div class="row g-5">
+              <div class="section-header">
+                <h2>JS HTML DOM AVANZADO</h2>
+                <p>En este capítulo, combinaremos algunos otros métodos XML
+                  DOM
+                  importantes. Puede obtener más información sobre DOM XML en
+                  nuestro tutorial XML DOM.</p>
+              </div>
 
-          <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
-            <h3>MÉTODOS</h3>
-            <p> Los métodos HTML DOM son acciones que puede realizar (en elementos HTML). Las propiedades HTML DOM son valores (de elementos HTML) que puede establecer o cambiar.</p>
-            <a class="cta-btn align-self-start" href="metodo/index.html">Vamos aprender</a>
-          </div>
+              <!-- ======= On Focus Section ======= -->
+              <section id="onfocus" class="onfocus">
+                <div class="container-fluid p-0" data-aos="fade-up">
 
-          <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
-            <div class="img">
-              <img src="assets/img/metodo.png" alt="" class="img-fluid">
+                  <div class="row g-0">
+                    <div class="col-lg-6 video-play position-relative">
+                      <a href="https://www.youtube.com/watch?v=b-ZWMiqsAeU"
+                        class="glightbox play-btn"></a>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="content d-flex flex-column
+                        justify-content-center h-100">
+                        <h3>Animaciones DOM</h3>
+                        <ul>
+                          <li><i class="bi bi-check-circle"></i>Todas las
+                            animaciones deben ser relativas a un elemento
+                            contenedor.</li>
+                          <li><i class="bi bi-check-circle"></i>Las
+                            animaciones
+                            JavaScript se realizan programando cambios
+                            graduales
+                            en el estilo de un elemento.</li>
+                          <li><i class="bi bi-check-circle"></i>Los cambios
+                            son
+                            llamados por un temporizador. Cuando el intervalo
+                            del temporizador es pequeño, la animación parece
+                            continua.</li>
+                        </ul>
+                        <a href="introduccion/index.html" class="read-more
+                          align-self-start"><span>Aprender Más</span><i
+                            class="bi bi-arrow-right"></i></a>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </section><!-- End On Focus Section -->
+            </section><!-- End Introduccion Section -->
+
+            <!-- ======= Eventos Section ======= -->
+            <section id="eventos" class="services">
+              <section id="cta" class="cta">
+                <div class="container" data-aos="zoom-out">
+
+                  <div class="row g-5">
+
+                    <div class="col-lg-8 col-md-6 content d-flex flex-column
+                      justify-content-center order-last order-md-first">
+                      <h3>MÉTODOS</h3>
+                      <p> Los métodos HTML DOM son acciones que puede realizar
+                        (en elementos HTML). Las propiedades HTML DOM son
+                        valores (de elementos HTML) que puede establecer o
+                        cambiar.</p>
+                      <a class="cta-btn align-self-start"
+                        href="metodo/index.html">Vamos aprender</a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 order-first order-md-last
+                      d-flex align-items-center">
+                      <div class="img">
+                        <img src="assets/img/metodo.png" alt=""
+                          class="img-fluid">
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </section>
+            </section><!-- End Eventos Section -->
+
+
+            <!-- ======= Event Listener Section ======= -->
+            <section id="eventlistener" class="portfolio" data-aos="fade-up">
+              <section id="cta" class="cta">
+                <div class="container" data-aos="zoom-out">
+
+                  <div class="row g-5">
+
+                    <div class="col-lg-8 col-md-6 content d-flex flex-column
+                      justify-content-center order-last order-md-first">
+                      <h3>Componentes</h3>
+                      <p> El objeto del documento HTML DOM es el propietario
+                        de
+                        todos los demás objetos en su página web.</p>
+                      <a class="cta-btn align-self-start"
+                        href="componentes/index.html">Vamos aprender</a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 order-first order-md-last
+                      d-flex align-items-center">
+                      <div class="img">
+                        <img src="assets/img/documentos.png" alt=""
+                          class="img-fluid">
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </section>
+            </section><!-- End Event Listener Section -->
+
+            <!-- ======= Node Section ======= -->
+            <section id="node" class="team">
+              <section id="cta" class="cta">
+                <div class="container" data-aos="zoom-out">
+
+                  <div class="row g-5">
+
+                    <div class="col-lg-8 col-md-6 content d-flex flex-column
+                      justify-content-center order-last order-md-first">
+                      <h3>NODE DOM</h3>
+                      <p> En el contexto del DOM, un nodo es un único punto en
+                        el arbol de nodos. Los nodos pueden ser varias cosas el
+                        documento mismo, elementos, texto y comentarios..</p>
+                      <a class="cta-btn align-self-start"
+                        href="./pages/node/index.html">Vamos aprender</a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 order-first order-md-last
+                      d-flex align-items-center">
+                      <div class="img">
+                        <img src="assets/img/elementos.png" alt=""
+                          class="img-fluid">
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </section>
+            </section><!-- End Node Section -->
+
+            <!-- ======= HTML Section ======= -->
+            <section id="HTML" class="team">
+              <section id="cta" class="cta">
+                <div class="container" data-aos="zoom-out">
+
+                  <div class="row g-5">
+
+                    <div class="col-lg-8 col-md-6 content d-flex flex-column
+                      justify-content-center order-last order-md-first">
+                      <h3>COLECCIONES DOM</h3>
+                      <p> La interfaz HTMLCollection representa una colección
+                        genérica (objeto tipo array similar a arguments) de
+                        elementos (en orden de documento) y ofrece métodos y
+                        propiedades para seleccionarlos de la lista.</p>
+                      <a class="cta-btn align-self-start"
+                        href="html/index.html">Vamos aprender</a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 order-first order-md-last
+                      d-flex align-items-center">
+                      <div class="img">
+                        <img src="assets/img/html.png" alt=""
+                          class="img-fluid">
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </section>
+            </section><!-- End HTML Section -->
+
+            <!-- ======= CSS Section ======= -->
+            <section id="css" class="team">
+              <section id="cta" class="cta">
+                <div class="container" data-aos="zoom-out">
+
+                  <div class="row g-5">
+
+                    <div class="col-lg-8 col-md-6 content d-flex flex-column
+                      justify-content-center order-last order-md-first">
+                      <h3>LISTA DE NODOS DOM</h3>
+                      <p> Cuando se utiliza este tipo de childNodes o
+                        getElementsByTagName (a) Propiedad o método que devuelve
+                        un objeto de lista de nodos.
+
+                        Lista de nodos del objeto representa una lista de nodos,
+                        y XML en el mismo orden.
+
+                        lista de nodos de nodos desde el número de índice basado
+                        en cero para el acceso.</p>
+                      <a class="cta-btn align-self-start"
+                        href="css/index.html">Vamos
+                        aprender</a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 order-first order-md-last
+                      d-flex align-items-center">
+                      <div class="img">
+                        <img src="assets/img/css.png" alt=""
+                          class="img-fluid">
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </section>
+            </section><!-- End CSS Section -->
+
+            <!-- ======= Formulario Section ======= -->
+            <section id="formulario" class="team">
+              <section id="cta" class="cta">
+                <div class="container" data-aos="zoom-out">
+
+                  <div class="row g-5">
+
+                    <div class="col-lg-8 col-md-6 content d-flex flex-column
+                      justify-content-center order-last order-md-first">
+                      <h3>NAVEGACION DOM</h3>
+                      <p> Con el DOM de HTML, se puede navegar por el árbol de
+                        nodos utilizando relaciones de nodo.</p>
+                      <a class="cta-btn align-self-start"
+                        href="formulario/index.html">Vamos aprender</a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 order-first order-md-last
+                      d-flex align-items-center">
+                      <div class="img">
+                        <img src="assets/img/formulario.png" alt=""
+                          class="img-fluid">
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </section>
+            </section><!-- End Formulario Section -->
+
+          </main><!-- End #main -->
+
+          <!-- ======= Footer ======= -->
+          <footer id="footer" class="footer">
+
+            <div class="footer-legal text-center">
+              <div class="container d-flex flex-column flex-lg-row
+                justify-content-center justify-content-lg-between
+                align-items-center">
+
+                <div class="d-flex flex-column align-items-center
+                  align-items-lg-start">
+                  <div class="copyright">
+                    &copy; Copyright <strong><span>Grupo 03</span></strong>.
+                    All
+                    Rights Reserved
+                  </div>
+                  <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
+                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                  </div>
+                </div>
+
+                <div class="social-links order-first order-lg-last mb-3
+                  mb-lg-0">
+                  <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                  <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+                  <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                </div>
+
+              </div>
             </div>
-          </div>
 
-        </div>
+          </footer><!-- End Footer -->
 
-      </div>
-    </section>
-    </section><!-- End Eventos Section -->
+          <a href="#" class="scroll-top d-flex align-items-center
+            justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+          <div id="preloader"></div>
 
+          <!-- Vendor JS Files -->
+          <script
+            src="assets/vendor/jquery-1.11.0.min.js"></script>
+          <script type="text/javascript" src="assets/vendor/bootstrap.min.js"></script>
+          <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+          <script src="assets/vendor/aos/aos.js"></script>
+          <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+          <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+          <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+          <script src="assets/vendor/php-email-form/validate.js"></script>
+          <!-- Template Main JS File -->
+          <script src="assets/js/main.js"></script>
 
-    <!-- ======= Event Listener Section ======= -->
-    <section id="eventlistener" class="portfolio" data-aos="fade-up">
+        </body>
 
-     <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-out">
-
-        <div class="row g-5">
-
-          <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
-            <h3>Componentes</h3>
-            <p> El objeto del documento HTML DOM es el propietario de todos los demás objetos en su página web.</p>
-            <a class="cta-btn align-self-start" href="componentes/index.html">Vamos aprender</a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
-            <div class="img">
-              <img src="assets/img/documentos.png" alt="" class="img-fluid">
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    </section><!-- End Event Listener Section -->
-
-    <!-- ======= Node Section ======= -->
-    <section id="node" class="team">
-      <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-out">
-
-        <div class="row g-5">
-
-          <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
-            <h3>ELEMENTOS</h3>
-            <p> Esta página le enseña cómo encontrar y acceder a elementos HTML en una página HTML.</p>
-            <a class="cta-btn align-self-start" href="elementos/index.html">Vamos aprender</a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
-            <div class="img">
-              <img src="assets/img/elementos.png" alt="" class="img-fluid">
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    </section><!-- End Node Section -->
-
-    <!-- ======= HTML Section ======= -->
-    <section id="HTML" class="team">
-      <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-out">
-
-        <div class="row g-5">
-
-          <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
-            <h3>HTML</h3>
-            <p> El HTML DOM permite que JavaScript cambie el contenido de los elementos HTML.</p>
-            <a class="cta-btn align-self-start" href="html/index.html">Vamos aprender</a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
-            <div class="img">
-              <img src="assets/img/html.png" alt="" class="img-fluid">
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    </section><!-- End HTML Section -->
-
-    <!-- ======= CSS Section ======= -->
-    <section id="css" class="team">
-      <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-out">
-
-        <div class="row g-5">
-
-          <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
-            <h3>CSS</h3>
-            <p> El HTML DOM permite que JavaScript cambie el estilo de los elementos HTML.</p>
-            <a class="cta-btn align-self-start" href="css/index.html">Vamos aprender</a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
-            <div class="img">
-              <img src="assets/img/css.png" alt="" class="img-fluid">
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    </section><!-- End CSS Section -->
-
-    <!-- ======= Formulario Section ======= -->
-    <section id="formulario" class="team">
-      <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-out">
-
-        <div class="row g-5">
-
-          <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
-            <h3>FORMULARIO</h3>
-            <p> La validación de formularios HTML se puede realizar mediante JavaScript.</p>
-            <a class="cta-btn align-self-start" href="formulario/index.html">Vamos aprender</a>
-          </div>
-
-          <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
-            <div class="img">
-              <img src="assets/img/formulario.png" alt="" class="img-fluid">
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-    </section><!-- End Formulario Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-
-    <div class="footer-legal text-center">
-      <div class="container d-flex flex-column flex-lg-row justify-content-center justify-content-lg-between align-items-center">
-
-        <div class="d-flex flex-column align-items-center align-items-lg-start">
-          <div class="copyright">
-            &copy; Copyright <strong><span>Grupo 03</span></strong>. All Rights Reserved
-          </div>
-          <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/herobiz-bootstrap-business-template/ -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-          </div>
-        </div>
-
-        <div class="social-links order-first order-lg-last mb-3 mb-lg-0">
-          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-        </div>
-
-      </div>
-    </div>
-
-  </footer><!-- End Footer -->
-
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-</body>
-
-</html>
+      </html>
