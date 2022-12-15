@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>NAVEGACION DOM</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.ico" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Personal - v4.9.1
+  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body>
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+      <div class="container">
+
+        <h1><a href="../../index.html">NAVEGACION DOM</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+        <h2>JavaScript <span>HTML DOM</span> Navegación</h2>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link active" href="#header">Inicio</a></li>
+            <li><a class="nav-link" href="#about">Nodos</a></li>
+            <li><a class="nav-link" href="#resume">Ejemplo</a></li>
+            <li><a class="nav-link" href="#services">HTML interno</a></li>
+            <li><a class="nav-link" href="#portfolio">Propiedad</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+        <div class="social-links">
+          <a class="twitter"><i class="bi bi-code-slash"></i></a>
+          <a class="facebook"><i class="bi bi-cpu"></i></a>
+          <a class="instagram"><i class="bi bi-journal-code"></i></a>
+          <a class="linkedin"><i class="bi bi-device-hdd-fill"></i></a>
+        </div>
+
+      </div>
+    </header><!-- End Header -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="resume">
+
+      <!-- ======= About Me ======= -->
+      <div class="about-me container">
+
+        <div class="section-title">
+          <h2>Nodos</h2>
+          <p>Nodos DOM</p>
+          <b>De acuerdo con el estándar W3C HTML DOM, todo en un documento HTML
+            es un nodo:</b><p></p>
+          <ul>
+            <li>
+              Todo el documento es un nodo de documento.
+            </li>
+            <li>
+              Cada elemento HTML es un nodo de elemento
+            </li>
+            <li>
+              El texto dentro de los elementos HTML son nodos de texto.
+            </li>
+            <li>
+              Cada atributo HTML es un nodo de atributo (obsoleto)
+            </li>
+            <li>
+              Todos los comentarios son nodos de comentarios.
+            </li>
+          </ul>
+        </div>
+
+        <img src="../navegacion/assets/img/navegation.png" alt="">
+
+        <p><br>Con el HTML DOM, JavaScript puede acceder a todos los nodos del
+          árbol de nodos. <br>
+          Se pueden crear nuevos nodos y todos los nodos se pueden modificar o
+          eliminar.</p>
+        <hr>
+
+        <h1>Relaciones de nodos</h1>
+        <p>Los nodos del árbol de nodos tienen una relación jerárquica entre sí.<br>
+          Los términos padre, hijo y hermano se utilizan para describir las
+          relaciones.</p>
+        <ul>
+          <li>
+            En un árbol de nodos, el nodo superior se llama raíz (o nodo raíz)
+          </li>
+          <li>
+            Cada nodo tiene exactamente un padre, excepto la raíz (que no tiene
+            padre)
+          </li>
+          <li>
+            Un nodo puede tener varios hijos.
+          </li>
+          <li>
+            Los hermanos (hermanos o hermanas) son nodos con el mismo padre
+          </li>
+        </ul>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <br><br>
+            <div class="cuadro">
+              <p>
+                &#60;html><br>
+                &#60;head><br>
+                &#60;title>DOM Tutorial&#60;/title><br>
+                &#60;/head><br><br>
+                &#60;body><br>
+                &#60;h1>DOM Lesson one&#60;/h1><br>
+                &#60;p>Hello world!&#60;/p><br>
+                &#60;/body><br>
+                &#60;/html><br>
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-right">
+            <br><br>
+            <center><img src="../navegacion/assets/img/nodeN.png" class="img"
+                alt=""></center>
+          </div>
+        </div>
+
+        <p><br></p><p><br></p>
+
+        <p>Desde el HTML anterior se puede leer:</p>
+        <ul>
+          <li>
+            &#60;html>es el nodo raíz
+          </li>
+          <li>
+            &#60;html>no tiene padres
+          </li>
+          <li>
+            &#60;html>es el padre de &#60;head> y &#60;body>
+          </li>
+          <li>
+            &#60;head>es el primer hijo de &#60;html>
+          </li>
+          <li>
+            &#60;body>es el ultimo hijo de &#60;html>
+          </li>
+        </ul>
+        <p>y:</p>
+        <ul>
+          <li>
+            &#60;head>tiene un hijo:&#60;title>
+          </li>
+          <li>
+            &#60;title>tiene un hijo (un nodo de texto): "Tutorial DOM"
+          </li>
+          <li>
+            &#60;body>tiene dos hijos: &#60;h1> y &#60;p>
+          </li>
+          <li>
+            &#60;h1>tiene un hijo: "Lección uno de DOM"
+          </li>
+          <li>
+            &#60;p>tiene un hijo: "¡Hola mundo!"
+          </li>
+          <li>
+            &#60;h1> y &#60;p> son hermanos
+          </li>
+        </ul>
+
+        <hr>
+
+        <div class="resume">
+          <h2>Navegación entre nodos</h2>
+          <p>Puede usar las siguientes propiedades de nodo para navegar entre
+            nodos con JavaScript:</p><p></p>
+          <ul style="color: rgb(118, 255, 125);">
+            <li>
+              parentNode
+            </li>
+            <li>
+              childNodes[nodenumber]
+            </li>
+            <li>
+              firstChild
+            </li>
+            <li>
+              lastChild
+            </li>
+            <li>
+              nextSibling
+            </li>
+            <li>
+              previousSibling
+            </li>
+          </ul>
+        </div>
+      </div><!-- End About Me -->
+
+    </section><!-- End About Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Ejemplo</h2>
+          <br>
+        </div>
+
+
+        <div class="resume-item pb-0">
+          <h2>Ejemeplo</h2>
+          <p class="codigo">&#60;title id="demo">DOM Tutorial&#60;/title></p>
+          <p>El nodo del elemento <font class="codigo">&#60;title></font> (en el
+            ejemplo anterior) no contiene texto.<br>
+            Contiene un nodo de texto con el valor "Tutorial DOM".<br>
+            Se puede acceder al valor del nodo de texto mediante la
+            innerHTMLpropiedad del nodo:</p>
+          <p><li>document.getElementById("demo").innerHTML;</li></p>
+          <p>Acceder a la propiedad innerHTML es lo mismo que acceder a la
+            nodeValue del primer hijo:</p>
+          <p><li>myTitle = document.getElementById("demo").firstChild.nodeValue;</li></p>
+          <p>El acceso al primer hijo también se puede hacer así:</p>
+          <p><li>myTitle =
+              document.getElementById("demo").childNodes[0].nodeValue;</li></p><br>
+        </div> <br>
+        <p>Todos los (3) ejemplos siguientes recuperan el texto de un &#60;h1>
+          elemento y lo copian en un &#60;p> elemento:</p>
+        <br>
+
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <div class="resume-item resume-item pb-0">
+              <h4>Ejemplo 1</h4>
+              <h1 id="id01">My First Page</h1>
+              <p id="id02"></p>
+
+              <script>
+                  document.getElementById("id02").innerHTML = document.getElementById("id01").innerHTML;
+                </script>
+            </div>
+
+            <br><br>
+
+            <div class="resume-item resume-item pb-0">
+              <h4>Ejemplo 2</h4>
+              <h1 id="id0l1">My First Page</h1>
+              <p id="id0l2"></p>
+
+              <script>
+                  document.getElementById("id0l2").innerHTML = document.getElementById("id0l1").firstChild.nodeValue;
+                </script>
+            </div>
+
+            <br><br>
+
+            <div class="resume-item resume-item pb-0">
+              <h4>Ejemplo 3</h4>
+              <h1 id="id0k1">My First Page</h1>
+              <p id="id0k2"></p>
+
+              <script>
+                  document.getElementById("id0k2").innerHTML = document.getElementById("id0k1").childNodes[0].nodeValue;                </script>
+            </div>
+          </div>
+
+          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <div class="resume-item resume-item pb-0">
+              <h4>Ejemplo 1:</h4><br>
+              <p> &#60;h1 id="id01">My First Page&#60;/h1><br>
+                &#60;p id="id02">&#60;/p><br>
+
+                &#60;script><br>
+                document.getElementById("id02").innerHTML =
+                document.getElementById("id01").innerHTML;<br>
+                &#60;/script><br></p><br>
+            </div>
+            <br>
+            <div class="resume-item resume-item pb-0">
+              <h4>Ejemplo 1:</h4><br>
+              <p> &#60;h1 id="id01">My First Page&#60;/h1><br>
+                &#60;p id="id02">&#60;/p><br>
+
+                &#60;script><br>
+                document.getElementById("id02").innerHTML =
+                document.getElementById("id01").firstChild.nodeValue;<br>
+                &#60;/script><br></p><br>
+            </div>
+            <br>
+            <div class="resume-item resume-item pb-0">
+              <h4>Ejemplo 1:</h4><br>
+              <p> &#60;h1 id="id01">My First Page&#60;/h1><br>
+                &#60;p id="id02">&#60;/p><br>
+
+                &#60;script><br>
+                document.getElementById("id02").innerHTML =
+                document.getElementById("id01").childNodes[0].nodeValue;<br>
+                &#60;/script><br></p><br>
+            </div>
+
+          </div>
+
+        </div>
+      </section><!-- End Resume Section -->
+
+      <!-- ======= Services Section ======= -->
+      <section id="services" class="resume">
+        <div class="container">
+
+          <div class="section-title">
+            <h2>HTML interno</h2>
+            <br>
+          </div>
+
+
+          <div class="resume-item pb-0">
+            <h2>HTML interno</h2>
+            <p>En este tutorial usamos la propiedad innerHTML para recuperar el
+              contenido de un elemento HTML.</p>
+            <p>Sin embargo, aprender los otros métodos anteriores es útil para
+              comprender la estructura de árbol y la navegación del DOM.</p>
+          </div> <br>
+
+          <hr>
+
+          <div class="resume-item pb-0">
+            <h2>Nodos raíz DOM</h2>
+            <p>Hay dos propiedades especiales que permiten el acceso al
+              documento completo:</p>
+            <ul>
+              <li>
+                document.body- El cuerpo del documento.
+              </li>
+              <li>
+                document.documentElement- El documento completo
+              </li>
+            </ul>
+          </div> <br>
+
+
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-right">
+              <div class="resume-item resume-item pb-0">
+                <h4>Ejemplo 1</h4>
+                <h2>JavaScript HTMLDOM</h2>
+                <p>Displaying document.body</p>
+
+                <p id="demo"></p>
+
+                <script>
+                  document.getElementById("demo").innerHTML = document.body.innerHTML;
+                </script>
+              </div>
+
+              <br><br>
+
+              <div class="resume-item resume-item pb-0">
+                <h4>Ejemplo 2</h4>
+                <h2>JavaScript HTMLDOM</h2>
+                <p>Displaying document.documentElement</p>
+
+                <p id="demo2"></p>
+
+                <script>
+                  document.getElementById("demo2").innerHTML = document.documentElement.innerHTML;
+                </script>
+              </div>
+
+              <br><br>
+            </div>
+
+            <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+              <div class="resume-item resume-item pb-0">
+                <h4>Ejemplo 1:</h4><br>
+                <p> &#60;h2>JavaScript HTMLDOM&#60;/h2><br>
+                  &#60;p>Displaying document.body&#60;/p><br>
+                  &#60;p id="demo">&#60;/p><br>
+
+                  &#60;script><br>
+                  document.getElementById("demo").innerHTML =
+                  document.body.innerHTML;<br>
+                  &#60;/script><br></p><br>
+              </div>
+              <br>
+              <div class="resume-item resume-item pb-0">
+                <h4>Ejemplo 2:</h4><br>
+                <p> &#60;h2>JavaScript HTMLDOM&#60;/h2><br>
+                  &#60;p>Displaying document.documentElement&#60;/p><br>
+                  &#60;p id="demo">&#60;/p><br>
+
+                  &#60;script><br>
+                  document.getElementById("demo").innerHTML =
+                  document.documentElement.innerHTML;<br>
+                  &#60;/script><br></p><br>
+              </div>
+              <br>
+            </div>
+
+          </div>
+        </section><!-- End Resume Section -->
+
+        <!-- ======= Portfolio Section ======= -->
+        <section id="portfolio" class="resume">
+          <div class="container">
+
+            <div class="section-title">
+              <h2>Propiedad</h2>
+              <br>
+            </div>
+
+            <div class="resume-item pb-0">
+              <h2>La propiedad nodeValue</h2>
+              <p>La nodeValue propiedad especifica el valor de un nodo.</p>
+              <ul>
+                <li>
+                  nodeValue para nodos de elementos esnull
+                </li>
+                <li>
+                  nodeValue para nodos de texto es el texto mismo
+                </li>
+                <li>
+                  nodeValue para los nodos de atributo es el valor del atributo
+                </li>
+              </ul>
+            </div> <br>
+
+            <hr>
+
+            <div class="resume-item pb-0">
+              <h2>La propiedad de tipo de nodo</h2>
+              <p>La nodeTypepropiedad es de solo lectura. Devuelve el tipo de un
+                nodo.</p>
+            </div> <br>
+
+
+            <div class="row">
+              <div class="col-lg-6" data-aos="fade-right">
+                <div class="resume-item resume-item pb-0">
+                  <h4>Ejemplo </h4>
+
+                  <h1 id="id010">My First Page</h1>
+                  <p id="id020"></p>
+
+                  <script>
+                  document.getElementById("id020").innerHTML = document.getElementById("id010").nodeType;
+                  </script>
+                </div>
+                <br><br>
+                <br><br>
+              </div>
+
+              <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+                <div class="resume-item resume-item pb-0">
+                  <h4>Ejemplo</h4><br>
+                  <p> &#60;h1 id="id01">My First Page&#60;/h1><br>
+                    &#60;p id="id02">&#60;/p><br>
+
+                    &#60;script><br>
+                    document.getElementById("id02").innerHTML =
+                    document.getElementById("id01").nodeType;<br>
+                    &#60;/script><br></p><br>
+                </div>
+                <br>
+                <br>
+              </div>
+
+              <p><h3>Las propiedades de tipo de nodo más importantes son:</h3></p>
+
+              <center><table class="table position">
+                <thead>
+                  <tr>
+                    <th scope="col">Node</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Example</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">ELEMENT_NODE</th>
+                    <td>1</td>
+                    <td>&#60;h1 class="heading">W3Schools&#60;/h1></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ATTRIBUTE_NODE</th>
+                    <td>2</td>
+                    <td>class = "heading" (deprecated)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">TEXT_NODE</th>
+                    <td>3</td>
+                    <td>W3Schools</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">COMMENT_NODE</th>
+                    <td>8</td>
+                    <td>&#60;!-- This is a comment --></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">DOCUMENT_NODE</th>
+                    <td>9</td>
+                    <td>The HTML document itself (the parent of &#60;html>)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">DOCUMENT_TYPE_NODE</th>
+                    <td>10</td>
+                    <td>&#60;!Doctype html></td>
+                  </tr>
+                </tbody>
+              </table></center>
+
+            </div>
+          </div>
+        </section><!-- End Resume Section -->
+
+        <!-- ======= Contact Section ======= -->
+        <section id="contact" class="resume">
+          <div class="container">
+
+            <div class="section-title">
+              <h2>Eliminación</h2>
+              <p>Eliminación de elementos HTML existentes</p>
+              <h6>Para eliminar un elemento HTML, utilice el remove() método:</h6>
+            </div>
+
+            <div class="about-me container">
+              <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                  <div class="resume-item resume-item pb-0">
+                    <h4>Ejemplo 1</h4>
+                    <h2>JavaScript HTML DOM</h2>
+                    <h3>Replace an HTML Element.</h3>
+
+                    <div id="div1">
+                      <p id="p1">This is a paragraph.</p>
+                      <p id="p2">This is a paragraph.</p>
+                    </div>
+
+                    <script>
+                const parent2 = document.getElementById("div1");
+                const child2 = document.getElementById("p1");
+                const para2 = document.createElement("p");
+                const node2 = document.createTextNode("This is new.");
+                para2.appendChild(node2);
+                parent2.replaceChild(para2,child2);
+                </script>
+                  </div>
+                  <br><br>
+                </div>
+
+                <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+                  <div class="resume-item resume-item pb-0">
+                    <h4>Ejemplo:</h4><br>
+                    <p> &#60;h2>JavaScript HTML DOM&#60;/h2><br>
+                      &#60;h3>Remove an HTML Element.&#60;/h3><br>
+                      &#60;div id="div1"><br>
+                      &#60;p id="p1">This is a paragraph. &#60;/p><br>
+                      &#60;p id="p2">This is another paragraph. &#60;/p><br>
+                      &#60;/div><br><br>
+                      &#60;script><br>
+                      const parent = document.getElementById("div1");<br>
+                      const child = document.getElementById("p1");<br>
+                      const para = document.createElement("p");<br>
+                      const node = document.createTextNode("This is new.");<br>
+                      para.appendChild(node);<br>
+                      parent.replaceChild(para,child);<br>
+                      &#60;/script><br></p><br>
+                  </div>
+                  <br>
+                </div>
+              </div>
+
+            </div><!-- End About Me -->
+
+          </div>
+        </section><!-- End Contact Section -->
+
+        <!-- Vendor JS Files -->
+        <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+
+      </body>
+
+    </html>
