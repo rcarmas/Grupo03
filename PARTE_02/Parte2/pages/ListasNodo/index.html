@@ -42,15 +42,16 @@
     <header id="header">
       <div class="container">
 
-        <h1><a href="../../index.html">COLECCIONES DOM</a></h1>
+        <h1><a href="../../index.html">LISTA DE NODOS DOM</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-        <h2>Colecciones <span>JavaScript</span> H TML DOM</h2>
+        <h2>Listas de nodos <span>JavaScript</span> HTML DOM</h2>
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="nav-link active" href="#header">Inicio</a></li>
             <li><a class="nav-link" href="#about">Objeto </a></li>
             <li><a class="nav-link" href="#resume">Longitud</a></li>
+            <li><a class="nav-link" href="#difference">Diferencia</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
@@ -73,21 +74,31 @@
 
         <div class="section-title">
           <h2>Objeto</h2>
-          <p>El objeto HTMLCollection</p>
+          <p>El objeto HTML DOM NodeList</p>
         </div>
 
         <ul>
-          <li>El getElementsByTagName()método devuelve un HTMLCollectionobjeto.</li>
-          <li>Un HTMLCollectionobjeto es una lista similar a una matriz (colección) de elementos HTML.</li>
+          <li>Un NodeListobjeto es una lista (colección) de nodos extraídos de
+            un documento.</li>
+          <li>Un NodeListobjeto es casi lo mismo que un HTMLCollectionobjeto.</li>
+          <li>Algunos navegadores (más antiguos) devuelven un objeto NodeList en
+            lugar de HTMLCollection para métodos como getElementsByClassName().</li>
+          <li>Todos los navegadores devuelven un objeto NodeList para la
+            propiedad childNodes. </li>
+          <li>La mayoría de los navegadores devuelven un objeto NodeList para el
+            método querySelectorAll().</li><br>
         </ul>
 
         <div class="resume">
           <hr>
-          <h5>El siguiente código selecciona todos los &#60;p> elementos en un documento:</h5>
-          <p><li style="color: rgb(0, 236, 158);">const myCollection = document.getElementsByTagName("p");</li></p>
-          <p>Se puede acceder a los elementos de la colección mediante un número de índice.</p>
-          <p>Para acceder al segundo elemento &#60;p> puedes escribir:</p>
-          <p><li style="color: rgb(0, 236, 158);">myCollection[1]</li></p>
+          <h5>El siguiente código selecciona todos los &#60;p> elementos en un
+            documento:</h5>
+          <p><li style="color: rgb(0, 236, 158);">const myNodeList =
+              document.querySelectorAll("p");</li></p>
+          <p>Se puede acceder a los elementos de NodeList mediante un número de
+            índice.</p>
+          <p>Para acceder al segundo nodo &#60;p> puedes escribir:</p>
+          <p><li style="color: rgb(0, 236, 158);">myNodeList[1]</li></p>
         </div>
         <hr><br>
         <div class="row">
@@ -95,14 +106,16 @@
             <br>
             <div class="resume-item resume-item pb-0">
               <h4>Ejemplo:</h4>
-              <h2>JavaScript HTML DOM</h2>
+              <h2>JavaScript HTML DOM</h2><br>
               <p>Hello World!</p>
               <p>Hello Norway!</p>
               <p id="demo"></p>
-              
+
               <script>
-              const myCollection = document.getElementsByTagName("p");
-              document.getElementById("demo").innerHTML = "The innerHTML of the second paragraph is: " + myCollection[1].innerHTML;
+              const myNodelist = document.querySelectorAll("p");
+              
+                document.getElementById("demo").innerHTML = "The innerHTML of the second paragraph is: " + myNodelist[8].innerHTML;
+              
               </script>
               <br>
             </div>
@@ -113,16 +126,17 @@
             <div class="resume-item resume-item pb-0">
               <h4>Código:</h4><br>
               <p> &#60;h2>JavaScript HTML DOM&#60;/h2><br>
-              &#60;p>Hello World!&#60;/p><br>
-              &#60;p>Hello Norway!&#60;/p><br>
-              &#60;p id="demo">&#60;/p><br>
-              <br>
-              &#60;script><br>
-              const myCollection = document.getElementsByTagName("p");<br>
-              document.getElementById("demo").innerHTML = "The innerHTML of the second paragraph is: " + myCollection[1].innerHTML;<br>
-              &#60;/script><br></p><br>
+                &#60;p>Hello World!&#60;/p><br>
+                &#60;p>Hello Norway!&#60;/p><br>
+                &#60;p id="demo">&#60;/p><br>
+                <br>
+                &#60;script><br>
+                const myNodelist = document.querySelectorAll("p");<br>
+                document.getElementById("demo").innerHTML = "The innerHTML of
+                the second paragraph is: " + myNodelist[1].innerHTML;<br>
+                &#60;/script><br></p><br>
             </div>
-              <br>
+            <br>
           </div>
         </div>
 
@@ -136,13 +150,14 @@
 
         <div class="section-title">
           <h2>Longitud</h2>
-          <p>HTML HTMLCollection Longitud</p>
+          <p>Longitud de la lista de nodos HTML DOM</p>
         </div>
 
         <div class="resume">
           <hr>
-          <h5>La length propiedad define el número de elementos en un HTMLCollection:</h5>
-          <p><li style="color: rgb(0, 236, 158);">myCollection.length</li></p>
+          <h5>La lengthpropiedad define el número de nodos en una lista de
+            nodos:</h5>
+          <p><li style="color: rgb(0, 236, 158);">myNodelist.length</li></p>
         </div>
         <hr><br>
         <div class="row">
@@ -154,10 +169,10 @@
               <p>Hello World!</p>
               <p>Hello Norway!</p>
               <p id="demo1"></p>
-              
+
               <script>
-              const myCollection1 = document.getElementsByTagName("p");
-              document.getElementById("demo1").innerHTML = "This document contains " + myCollection1.length + " paragraphs.";
+                  const myNodelist1 = document.querySelectorAll("p");
+                  document.getElementById("demo1").innerHTML = "This document contains " + myNodelist1.length + " paragraphs.";
               </script>
               <br>
             </div>
@@ -168,16 +183,17 @@
             <div class="resume-item resume-item pb-0">
               <h4>Código:</h4><br>
               <p> &#60;h2>JavaScript HTML DOM&#60;/h2><br>
-              &#60;p>Hello World!&#60;/p><br>
-              &#60;p>Hello Norway!&#60;/p><br>
-              &#60;p id="demo">&#60;/p><br>
-              <br>
-              &#60;script><br>
-              const myCollection = document.getElementsByTagName("p");<br>
-              document.getElementById("demo").innerHTML = "This document contains " + myCollection.length + " paragraphs.";<br>
-              &#60;/script><br></p><br>
+                &#60;p>Hello World!&#60;/p><br>
+                &#60;p>Hello Norway!&#60;/p><br>
+                &#60;p id="demo">&#60;/p><br>
+                <br>
+                &#60;script><br>
+                const myNodelist = document.querySelectorAll("p");<br>
+                document.getElementById("demo").innerHTML = "This document
+                contains " + myNodelist.length + " paragraphs.";<br>
+                &#60;/script><br></p><br>
             </div>
-              <br>
+            <br>
           </div>
         </div>
 
@@ -185,8 +201,10 @@
 
         <div class="resume">
           <hr>
-          <h5>La length propiedad es útil cuando desea recorrer los elementos de una colección:</h5>
-          <p><li>Cambia el color del texto de todos los elementos &#60;p>:</li></p>
+          <h5>La lengthpropiedad es útil cuando desea recorrer los nodos en una
+            lista de nodos:</h5>
+          <p><li>Cambia el color de todos los elementos &#60;p> en una lista de
+              nodos:</li></p>
         </div>
         <hr><br>
         <div class="row">
@@ -198,18 +216,16 @@
               <p>Hello World!</p>
               <p>Hello Norway!</p>
               <p>Click the button to change the color of all p elements.</p>
-              
               <button onclick="myFunction()">Try it</button>
 
               <script>
-                function myFunction() {
-                  const myCollection = document.getElementsByTagName("p");
-                  for (let i = 0; i < myCollection.length; i++) {
-                    myCollection[i].style.color = "red";
-                  }
+              function myFunction() {
+                const myNodelist = document.querySelectorAll("p");
+                for (let i = 0; i < myNodelist.length; i++) {
+                  myNodelist[i].style.color = "red";
                 }
+              }
               </script>
-              
               <br>
             </div>
           </div>
@@ -219,28 +235,76 @@
             <div class="resume-item resume-item pb-0">
               <h4>Código:</h4><br>
               <p> &#60;h2>JavaScript HTML DOM&#60;/h2><br>
-              &#60;p>Hello World!&#60;/p><br>
-              &#60;p>Hello Norway!&#60;/p><br>
-              &#60;p>Click the button to change the color of all p elements.&#60;/p><br>
-              <br>
-              &#60;button onclick="myFunction()">Try it&#60;/button><br>
-              <br>
-              &#60;script><br>
+                &#60;p>Hello World!&#60;/p><br>
+                &#60;p>Hello Norway!&#60;/p><br>
+                &#60;p>Click the button to change the color of all p
+                elements.&#60;/p><br>
+                <br>
+                &#60;button onclick="myFunction()">Try it&#60;/button><br>
+                <br>
+                &#60;script><br>
                 function myFunction() {<br>
-                  const myCollection = document.getElementsByTagName("p");<br>
-                  for (let i = 0; i < myCollection.length; i++) {<br>
-                    myCollection[i].style.color = "red";<br>
-                  }<br>
+                const myNodelist = document.querySelectorAll("p");<br>
+                for (let i = 0; i <myNodelist.length; i++) {<br>
+                myNodelist[i].style.color = "red";<br>
                 }<br>
-              &#60;/script><br></p><br>
+                }<br>
+                &#60;/script><br></p><br>
             </div>
-              <br>
+            <br>
           </div>
         </div>
 
       </div><!-- End About Me -->
 
     </section><!-- End Resume Section -->
+
+
+
+
+    <!-- ======= Resume Section ======= -->
+    <section id="difference" class="resume">
+      <div class="about-me container">
+
+        <div class="section-title">
+          <h2>Diferencia</h2>
+          <p>La diferencia entre una HTMLCollection y una NodeList</p>
+        </div>
+
+        <div class="resume">
+          <hr>
+          <p>Una lista de nodos y una colección de HTML son prácticamente lo
+            mismo.</p>
+          <p>Ambos son colecciones tipo matriz (listas) de nodos (elementos)
+            extraídos de un documento. Se puede acceder a los nodos por números
+            de índice. El índice comienza en 0.</p>
+          <p>Ambos tienen una propiedad de longitud que devuelve el número de
+            elementos de la lista (colección).</p>
+          <p>Una HTMLCollection es una colección de elementos de documento.</p>
+          <p>Una lista de nodos es una colección de nodos de documentos (nodos
+            de elementos, nodos de atributos y nodos de texto).</p>
+          <p>Se puede acceder a los elementos de HTMLCollection por su nombre,
+            identificación o número de índice.</p>
+          <p>Solo se puede acceder a los elementos de NodeList por su número de
+            índice.</p>
+          <p>Una HTMLCollection es siempre una colección en vivo . Ejemplo: si
+            agrega un elemento &#60;li> a una lista en el DOM, la lista en
+            HTMLCollection también cambiará.</p>
+          <p>Una NodeList suele ser una colección estática . Ejemplo: si
+            agrega un elemento &#60;li> a una lista en el DOM, la lista en
+            NodeList no cambiará.</p>
+          <p>Los métodos <font style="color: rgb(0, 236, 158);">getElementsByClassName()</font>
+            y <font style="color: rgb(0, 236, 158);">getElementsByTagName()</font>
+            devuelven una HTMLCollection activa.</p>
+          <p>El <font style="color: rgb(0, 236, 158);">querySelectorAll()</font> método devuelve una lista de nodos estática.</p>
+          <p>La <font style="color: rgb(0, 236, 158);">childNodes</font> propiedad devuelve una lista de nodos activa.</p>
+        </div>
+      </div><!-- End About Me -->
+
+    </section><!-- End Resume Section -->
+
+
+
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>

@@ -364,7 +364,7 @@ section {
     visibility: hidden;
   }
 
- 
+
 
   .navbar .dropdown ul {
     display: block;
@@ -3263,17 +3263,16 @@ section {
   text-decoration: none;
 }
 
-
-.position{
+.position {
   margin-left: -120px;
 }
 
 @media (max-width: 1280px) {
-  .position{
+  .position {
     margin-left: 0px;
   }
 
-  .colorLetter{
+  .colorLetter {
     color: rgb(148, 148, 148) !important;
   }
 
