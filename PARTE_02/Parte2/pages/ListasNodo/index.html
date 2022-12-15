@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Personal Bootstrap Template</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet">
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Personal - v4.9.1
+  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  </head>
+
+  <body>
+
+    <!-- ======= Header ======= -->
+    <header id="header">
+      <div class="container">
+
+        <h1><a href="../../index.html">COLECCIONES DOM</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+        <h2>Colecciones <span>JavaScript</span> H TML DOM</h2>
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link active" href="#header">Inicio</a></li>
+            <li><a class="nav-link" href="#about">Objeto </a></li>
+            <li><a class="nav-link" href="#resume">Longitud</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+        <div class="social-links">
+          <a class="twitter"><i class="bi bi-code-slash"></i></a>
+          <a class="facebook"><i class="bi bi-cpu"></i></a>
+          <a class="instagram"><i class="bi bi-journal-code"></i></a>
+          <a class="linkedin"><i class="bi bi-device-hdd-fill"></i></a>
+        </div>
+
+      </div>
+    </header><!-- End Header -->
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="resume">
+
+      <!-- ======= About Me ======= -->
+      <div class="about-me container">
+
+        <div class="section-title">
+          <h2>Objeto</h2>
+          <p>El objeto HTMLCollection</p>
+        </div>
+
+        <ul>
+          <li>El getElementsByTagName()método devuelve un HTMLCollectionobjeto.</li>
+          <li>Un HTMLCollectionobjeto es una lista similar a una matriz (colección) de elementos HTML.</li>
+        </ul>
+
+        <div class="resume">
+          <hr>
+          <h5>El siguiente código selecciona todos los &#60;p> elementos en un documento:</h5>
+          <p><li style="color: rgb(0, 236, 158);">const myCollection = document.getElementsByTagName("p");</li></p>
+          <p>Se puede acceder a los elementos de la colección mediante un número de índice.</p>
+          <p>Para acceder al segundo elemento &#60;p> puedes escribir:</p>
+          <p><li style="color: rgb(0, 236, 158);">myCollection[1]</li></p>
+        </div>
+        <hr><br>
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <br>
+            <div class="resume-item resume-item pb-0">
+              <h4>Ejemplo:</h4>
+              <h2>JavaScript HTML DOM</h2>
+              <p>Hello World!</p>
+              <p>Hello Norway!</p>
+              <p id="demo"></p>
+              
+              <script>
+              const myCollection = document.getElementsByTagName("p");
+              document.getElementById("demo").innerHTML = "The innerHTML of the second paragraph is: " + myCollection[1].innerHTML;
+              </script>
+              <br>
+            </div>
+          </div>
+
+          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <br>
+            <div class="resume-item resume-item pb-0">
+              <h4>Código:</h4><br>
+              <p> &#60;h2>JavaScript HTML DOM&#60;/h2><br>
+              &#60;p>Hello World!&#60;/p><br>
+              &#60;p>Hello Norway!&#60;/p><br>
+              &#60;p id="demo">&#60;/p><br>
+              <br>
+              &#60;script><br>
+              const myCollection = document.getElementsByTagName("p");<br>
+              document.getElementById("demo").innerHTML = "The innerHTML of the second paragraph is: " + myCollection[1].innerHTML;<br>
+              &#60;/script><br></p><br>
+            </div>
+              <br>
+          </div>
+        </div>
+
+      </div><!-- End About Me -->
+
+    </section><!-- End About Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume">
+      <div class="about-me container">
+
+        <div class="section-title">
+          <h2>Longitud</h2>
+          <p>HTML HTMLCollection Longitud</p>
+        </div>
+
+        <div class="resume">
+          <hr>
+          <h5>La length propiedad define el número de elementos en un HTMLCollection:</h5>
+          <p><li style="color: rgb(0, 236, 158);">myCollection.length</li></p>
+        </div>
+        <hr><br>
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <br>
+            <div class="resume-item resume-item pb-0">
+              <h4>Ejemplo:</h4><br>
+              <h2>JavaScript HTML DOM</h2>
+              <p>Hello World!</p>
+              <p>Hello Norway!</p>
+              <p id="demo1"></p>
+              
+              <script>
+              const myCollection1 = document.getElementsByTagName("p");
+              document.getElementById("demo1").innerHTML = "This document contains " + myCollection1.length + " paragraphs.";
+              </script>
+              <br>
+            </div>
+          </div>
+
+          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <br>
+            <div class="resume-item resume-item pb-0">
+              <h4>Código:</h4><br>
+              <p> &#60;h2>JavaScript HTML DOM&#60;/h2><br>
+              &#60;p>Hello World!&#60;/p><br>
+              &#60;p>Hello Norway!&#60;/p><br>
+              &#60;p id="demo">&#60;/p><br>
+              <br>
+              &#60;script><br>
+              const myCollection = document.getElementsByTagName("p");<br>
+              document.getElementById("demo").innerHTML = "This document contains " + myCollection.length + " paragraphs.";<br>
+              &#60;/script><br></p><br>
+            </div>
+              <br>
+          </div>
+        </div>
+
+        <br>
+
+        <div class="resume">
+          <hr>
+          <h5>La length propiedad es útil cuando desea recorrer los elementos de una colección:</h5>
+          <p><li>Cambia el color del texto de todos los elementos &#60;p>:</li></p>
+        </div>
+        <hr><br>
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <br>
+            <div class="resume-item resume-item pb-0">
+              <h4>Ejemplo:</h4><br>
+              <h2>JavaScript HTML DOM</h2>
+              <p>Hello World!</p>
+              <p>Hello Norway!</p>
+              <p>Click the button to change the color of all p elements.</p>
+              
+              <button onclick="myFunction()">Try it</button>
+
+              <script>
+                function myFunction() {
+                  const myCollection = document.getElementsByTagName("p");
+                  for (let i = 0; i < myCollection.length; i++) {
+                    myCollection[i].style.color = "red";
+                  }
+                }
+              </script>
+              
+              <br>
+            </div>
+          </div>
+
+          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <br>
+            <div class="resume-item resume-item pb-0">
+              <h4>Código:</h4><br>
+              <p> &#60;h2>JavaScript HTML DOM&#60;/h2><br>
+              &#60;p>Hello World!&#60;/p><br>
+              &#60;p>Hello Norway!&#60;/p><br>
+              &#60;p>Click the button to change the color of all p elements.&#60;/p><br>
+              <br>
+              &#60;button onclick="myFunction()">Try it&#60;/button><br>
+              <br>
+              &#60;script><br>
+                function myFunction() {<br>
+                  const myCollection = document.getElementsByTagName("p");<br>
+                  for (let i = 0; i < myCollection.length; i++) {<br>
+                    myCollection[i].style.color = "red";<br>
+                  }<br>
+                }<br>
+              &#60;/script><br></p><br>
+            </div>
+              <br>
+          </div>
+        </div>
+
+      </div><!-- End About Me -->
+
+    </section><!-- End Resume Section -->
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+  </body>
+
+</html>
