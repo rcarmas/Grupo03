@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Animaciones DOM</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.ico" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Personal - v4.9.1
+  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container">
+
+      <h1><a href="../../index.html">Animaciones DOM</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
+      <h2>Como aprender <span>animaciones </span> usando JavaScript</h2>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link active" href="#header">Home</a></li>
+          <li><a class="nav-link" href="#introduccion">Introducción</a></li>
+          <li><a class="nav-link" href="#estilos">Estilos</a></li>
+          <li><a class="nav-link" href="#animaciones">Animación</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="bi bi-code-slash"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-cpu"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-journal-code"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-device-hdd-fill"></i></a>
+      </div>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Introducción Section ======= -->
+  <section id="introduccion" class="about">
+
+    <!-- ======= About Me ======= -->
+    <div class="container about-me" data-aos="fade-right">
+
+      <div class="row">
+         <div class="section-title">
+          <h2>INTRODUCCIÓN</h2>
+          <p>Para la creación de una animación empezamos con el boceto de una página web básica, creando un contenedor y un estilo propio</p>
+          <h3>Ejemplo</h3>
+        </div>
+        <div class="col-lg-6" style="border-style: solid;margin-left: 10px;" data-aos="fade-up" data-aos-delay="100">
+            <p>
+                &#60;!DOCTYPE html><br>
+                &#60;html><br>
+                &#60;body><br>
+                &#60;h1>Mi primera animación en Javascript/h1><br>
+                &#60;div id="animation">La animación va aquí/div><br>
+                &#60;/body><br>
+                &#60;/html><br>
+                &#60;script><br>
+                function eje1(){<br>
+                  document.getElementById("prueba1").innerHTML = "Aquí se presentará la animación";<br>
+                }<br>
+                &#60;/script><br>
+            </p>
+          </div>
+          <div class="col-lg-5" style="border-style: solid;margin-left: 10px;" data-aos="fade-up" data-aos-delay="100">
+                <h2>Mi primera animación en Javascript</h2>
+                <script>
+                function eje1(){
+                  document.getElementById("prueba1").innerHTML = "Aquí se presentará la animación";
+                }
+                </script>
+                <p id="prueba1">La Animación va aquí</p>
+                <input type="button" value="Probar" onclick="eje1();">
+          </div> 
+      </div>
+
+    </div>
+
+  </section><!-- End Introducción Section -->
+
+  <!-- ======= Estilos Section ======= -->
+  <section id="estilos" class="resume">
+    <div class="container">
+
+      <div class="row">
+          <div class="section-title">
+          <h2>Estilo de la animación</h2>
+          <p>
+            <ul style="font-size: x-large;">
+              <li>El elemento contenedor debe crearse con estilo = " position: relative".</li>
+              <li>El elemento de animación debe crearse con estilo = " position: absolute".</li>
+            </ul>
+          </p>
+          <h3>Ejemplo</h3>
+        </div>
+        <div class="col-lg-6" style="border-style: solid;margin-left: 10px;" data-aos="fade-up" data-aos-delay="100">
+            <br>
+            <p>
+                &#60;style><br>
+                &#60;#containerP1 {<br>
+                &#60;  width: 400px;<br>
+                &#60;  height: 400px;<br>
+                &#60;  position: relative;<br>
+                &#60;  background: skyblue;<br>
+                &#60;}<br>
+                &#60;#animateP1 {<br>
+                &#60;  width: 50px;<br>
+                &#60;  height: 50px;<br>
+                &#60;  position: absolute;<br>
+                &#60;  background: yellow;<br>
+                &#60;}<br>
+                &#60;/style><br>
+                &#60;/html><br>
+
+            </p>
+          </div>
+          <div class="col-lg-5" style="border-style: solid;margin-left: 10px;" data-aos="fade-up" data-aos-delay="100">
+            <style>
+            #containerP1 {
+              width: 400px;
+              height: 400px;
+              position: relative;
+              background: yellow;
+            }
+            #animateP1 {
+              width: 50px;
+              height: 50px;
+              position: absolute;
+              background: red;
+            }
+            </style>
+                <h2>Estilo de mi animación en Javascript</h2>
+                <div id="containerP1">
+                  <div id="animateP1">
+                    <br>
+                  </div>
+                </div>
+          </div>
+      </div>
+
+    </div>
+  </section><!-- End Estilos Section -->
+
+  <!-- ======= Animaciones Section ======= -->
+  <section id="animaciones" class="resume">
+    <div class="container">
+
+      <div class="row">  
+        <div class="section-title">
+          <h2>Animación Completa</h2>
+          <p>Ejemplo</p>
+        </div>
+        <div class="col-lg-6" style="border-style: solid;margin-left: 10px;" data-aos="fade-up" data-aos-delay="100">
+            <br>
+            <p>
+                &#60;style><br>
+                &#60;script><br>
+                &#60;function myMove() {<br>
+                &#60;  let id = null;<br>
+                &#60;  const elem = document.getElementById("animate");<br>   
+                &#60;  let pos = 0;<br>
+                &#60;  clearInterval(id);<br>
+                &#60;  id = setInterval(frame, 5);<br>
+                &#60;  function frame() {<br>
+                &#60;    if (pos == 350) {<br>
+                &#60;      clearInterval(id);<br>
+                &#60;    } else {<br>
+                &#60;      pos++; <br>
+                &#60;      elem.style.top = pos + "px";<br> 
+                &#60;      elem.style.left = pos + "px"; <br>
+                &#60;    }<br>
+                &#60;  }<br>
+                &#60;}<br>
+                &#60;/script><br>
+            </p>
+          </div>
+          <div class="col-lg-5" style="border-style: solid;margin-left: 10px;" data-aos="fade-up" data-aos-delay="100">
+                <style>
+                #containerP2 {
+                  width: 400px;
+                  height: 400px;
+                  position: relative;
+                  background: yellow;
+                }
+                #animateP2 {
+                  width: 50px;
+                  height: 50px;
+                  position: absolute;
+                  background: red;
+                }
+                </style>
+
+                <script>
+                function myMove() {
+                  let id = null;
+                  const elem = document.getElementById("animateP2");   
+                  let pos = 0;
+                  clearInterval(id);
+                  id = setInterval(frame, 5);
+                  function frame() {
+                    if (pos == 350) {
+                      clearInterval(id);
+                    } else {
+                      pos++; 
+                      elem.style.top = pos + "px"; 
+                      elem.style.left = pos + "px"; 
+                    }
+                  }
+                }
+                </script>
+
+
+                <h2>Animación completa en Javascript</h2>
+                <p><button onclick="myMove()">Probar</button></p> 
+                <div id="containerP2">
+                  <div id="animateP2">
+                    <br>
+                  </div>
+                </div>
+          </div>
+      </div>
+
+    </div>
+  </section><!-- End Animaciones Section -->
+
+  <div class="credits">
+    <!-- All the links in the footer should remain intact. -->
+    <!-- You can delete the links only if you purchased the pro version. -->
+    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/personal-free-resume-bootstrap-template/ -->
+    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+  </div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
