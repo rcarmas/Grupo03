@@ -42,18 +42,15 @@
     <header id="header">
       <div class="container">
 
-        <h1><a href="../../index.html">NODE DOM</a></h1>
+        <h1><a href="../../index.html">COLECCIONES DOM</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html" class="mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a> -->
-        <h2>Adición y <span>eliminación de nodos</span> (elementos HTML)</h2>
+        <h2>Colecciones <span>JavaScript</span> H TML DOM</h2>
         <nav id="navbar" class="navbar">
           <ul>
             <li><a class="nav-link active" href="#header">Inicio</a></li>
-            <li><a class="nav-link" href="#about">Creación</a></li>
-            <li><a class="nav-link" href="#resume">Explicación Creación</a></li>
-            <li><a class="nav-link" href="#services">Eliminación</a></li>
-            <li><a class="nav-link" href="#portfolio">Explicación Eliminación</a></li>
-            <li><a class="nav-link" href="#contact">Sustitución</a></li>
+            <li><a class="nav-link" href="#about">Objeto </a></li>
+            <li><a class="nav-link" href="#resume">Longitud</a></li>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
@@ -75,88 +72,57 @@
       <div class="about-me container">
 
         <div class="section-title">
-          <h2>Creación</h2>
-          <p>Creación de nuevos elementos HTML (nodos)</p>
+          <h2>Objeto</h2>
+          <p>El objeto HTMLCollection</p>
         </div>
 
+        <ul>
+          <li>El getElementsByTagName()método devuelve un HTMLCollectionobjeto.</li>
+          <li>Un HTMLCollectionobjeto es una lista similar a una matriz (colección) de elementos HTML.</li>
+        </ul>
+
+        <div class="resume">
+          <hr>
+          <h5>El siguiente código selecciona todos los &#60;p> elementos en un documento:</h5>
+          <p><li style="color: rgb(0, 236, 158);">const myCollection = document.getElementsByTagName("p");</li></p>
+          <p>Se puede acceder a los elementos de la colección mediante un número de índice.</p>
+          <p>Para acceder al segundo elemento &#60;p> puedes escribir:</p>
+          <p><li style="color: rgb(0, 236, 158);">myCollection[1]</li></p>
+        </div>
+        <hr><br>
         <div class="row">
           <div class="col-lg-6" data-aos="fade-right">
             <br>
             <div class="resume-item resume-item pb-0">
-              <h4>Ejemplo 1</h4>
+              <h4>Ejemplo:</h4>
               <h2>JavaScript HTML DOM</h2>
-              <p>Add a new HTML Element.</p>
-
-              <div id="div1">
-                <p id="p1">This is a paragraph.</p>
-                <p id="p2">This is another paragraph.</p>
-              </div>
-
+              <p>Hello World!</p>
+              <p>Hello Norway!</p>
+              <p id="demo"></p>
+              
               <script>
-                const para = document.createElement("p");
-                const node = document.createTextNode("This is new.");
-                para.appendChild(node);
-                const element = document.getElementById("div1");
-                element.appendChild(para);
+              const myCollection = document.getElementsByTagName("p");
+              document.getElementById("demo").innerHTML = "The innerHTML of the second paragraph is: " + myCollection[1].innerHTML;
               </script>
               <br>
-            </div>
-            <div class="resume-item resume-item pb-0">
-              <h4>Ejemplo 2</h4>
-              <h2>JavaScript HTML DOM</h2>
-              <p>Add a new HTML Element.</p>
-              
-              <div id="div_1">
-              <p id="p_1">This is a paragraph.</p>
-              <p id="p_2">This is another paragraph.</p>
-              </div>
-              
-              <script>
-                const para1 = document.createElement("p");
-                const node1 = document.createTextNode("This is new.");
-                para1.appendChild(node1);
-                
-                const element1 = document.getElementById("div_1");
-                const child1 = document.getElementById("p_1");
-                element1.insertBefore(para1,child1);
-              </script>
             </div>
           </div>
 
           <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <br>
             <div class="resume-item resume-item pb-0">
-              <h4>Ejemplo 1:</h4><br>
+              <h4>Código:</h4><br>
               <p> &#60;h2>JavaScript HTML DOM&#60;/h2><br>
-              &#60;p>Add a new HTML Element.
-              &#60;div id="div1"><br>
-              &#60;p id="p1">This is a paragraph. &#60;/p><br>
-              &#60;p id="p2">This is another paragraph. &#60;/p><br>
-              &#60;/div><br><br>
+              &#60;p>Hello World!&#60;/p><br>
+              &#60;p>Hello Norway!&#60;/p><br>
+              &#60;p id="demo">&#60;/p><br>
+              <br>
               &#60;script><br>
-              const para = document.createElement("p");<br>
-              const node = document.createTextNode("This is new.");<br>
-              para.appendChild(node);<br>
-              const element = document.getElementById("div1");<br>
-              element.appendChild(para);<br>
+              const myCollection = document.getElementsByTagName("p");<br>
+              document.getElementById("demo").innerHTML = "The innerHTML of the second paragraph is: " + myCollection[1].innerHTML;<br>
               &#60;/script><br></p><br>
             </div>
               <br>
-            <div class="resume-item resume-item pb-0">
-              <h4>Ejemplo 2:</h4><br>
-              &#60;div id="div1"><br>
-              &#60;p id="p1">This is a paragraph. &#60;/p><br>
-              &#60;p id="p2">This is another paragraph. &#60;/p><br>
-              &#60;/div><br><br>
-              &#60;script><br>
-              const para = document.createElement("p");<br>
-              const node = document.createTextNode("This is new.");<br>
-              para.appendChild(node);<br>
-              const element = document.getElementById("div1");<br>
-              const child = document.getElementById("p1");<br>
-              element.insertBefore(para, child);<br>
-              &#60;/script><br></p><br>
-            </div>
-
           </div>
         </div>
 
@@ -166,288 +132,115 @@
 
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume">
-      <div class="container">
+      <div class="about-me container">
 
         <div class="section-title">
-          <h2>Ejemplo</h2>
-          <br>
-          <p>Ejemplo explicado </p>
+          <h2>Longitud</h2>
+          <p>HTML HTMLCollection Longitud</p>
         </div>
 
+        <div class="resume">
+          <hr>
+          <h5>La length propiedad define el número de elementos en un HTMLCollection:</h5>
+          <p><li style="color: rgb(0, 236, 158);">myCollection.length</li></p>
+        </div>
+        <hr><br>
         <div class="row">
-          <div class="col-lg-6">
-            <div class="resume-item pb-0">
-              <h4>Este código crea un nuevo &#60;p> elemento:</h4>
-              <p><em>const para = document.createElement("p");</em></p>
-            </div>
+          <div class="col-lg-6" data-aos="fade-right">
             <br>
-            <div class="resume-item">
-              <h4>Para agregar texto al &#60;p>elemento, primero debe crear un
-                nodo de texto. Este código crea un nodo de texto:</h4>
-              <p><em>const node = document.createTextNode("This is a new
-                  paragraph.");</em></p>
-            </div>
-            <br>
-
-            <div class="resume-item">
-              <h4>Luego debe agregar el nodo de texto al &#60;p> elemento:</h4>
-              <p><em>para.appendChild(node);</em></p>
+            <div class="resume-item resume-item pb-0">
+              <h4>Ejemplo:</h4><br>
+              <h2>JavaScript HTML DOM</h2>
+              <p>Hello World!</p>
+              <p>Hello Norway!</p>
+              <p id="demo1"></p>
+              
+              <script>
+              const myCollection1 = document.getElementsByTagName("p");
+              document.getElementById("demo1").innerHTML = "This document contains " + myCollection1.length + " paragraphs.";
+              </script>
+              <br>
             </div>
           </div>
 
-          <div class="col-lg-6">
-            <h5 class="">Finalmente, debe agregar el nuevo elemento a un
-              elemento existente.</h5><br>
-            <div class="resume-item">
-              <h4>Este código encuentra un elemento existente:</h4>
-              <p><em>const element = document.getElementById("div1");</em></p>
-            </div>
-
+          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
             <br>
-
-            <div class="resume-item">
-              <h4>Este código agrega el nuevo elemento al elemento existente:</h4>
-              <p><em>element.appendChild(para);</em></p>
+            <div class="resume-item resume-item pb-0">
+              <h4>Código:</h4><br>
+              <p> &#60;h2>JavaScript HTML DOM&#60;/h2><br>
+              &#60;p>Hello World!&#60;/p><br>
+              &#60;p>Hello Norway!&#60;/p><br>
+              &#60;p id="demo">&#60;/p><br>
+              <br>
+              &#60;script><br>
+              const myCollection = document.getElementsByTagName("p");<br>
+              document.getElementById("demo").innerHTML = "This document contains " + myCollection.length + " paragraphs.";<br>
+              &#60;/script><br></p><br>
             </div>
+              <br>
           </div>
         </div>
 
-      </div>
-    </section><!-- End Resume Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Eliminación</h2>
-          <p>Eliminación de elementos HTML existentes</p>
-          <h6>Para eliminar un elemento HTML, utilice el remove() método:</h6>
-        </div>
-
-        <div class="about-me container">
-          <div class="row">
-            <div class="col-lg-6" data-aos="fade-right">
-              <div class="resume-item resume-item pb-0">
-                <h4>Ejemplo 1</h4>
-                <h2>JavaScript HTML DOM</h2>
-                <h3>Remove an HTML Element.</h3>
-                
-                <div>
-                <p id="p1">This is a paragraph.</p>
-                <p id="p2">This is another paragraph.</p>
-                </div>
-                
-                <button onclick="myFunction()">Remove Element</button>
-                
-                  <script>
-                    function myFunction() {
-                      document.getElementById("p1").remove();
-                    }
-                  </script>  
-              </div>
-
-              <br><br>
-
-              <div class="resume-item resume-item pb-0">
-                <h4>Ejemplo 2</h4>
-                <h4>Eliminación de un nodo secundario</h4><br>
-                <h2>JavaScript HTML DOM</h2>
-                <p>Remove Child Element</p>
-                
-                <div id="div-1">
-                <p id="p-1">This is a paragraph.</p>
-                <p id="p-2">This is another paragraph.</p>
-                </div>
-                
-                <script>
-                  const parent = document.getElementById("div-1");
-                  const child = document.getElementById("p-1");
-                  parent.removeChild(child);
-                </script>
-              </div>
-            </div>
-  
-            <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
-              <div class="resume-item resume-item pb-0">
-                <h4>Ejemplo 1:</h4><br>
-                <p> &#60;h2>JavaScript HTML DOM&#60;/h2><br>
-                &#60;h3>Remove an HTML Element.&#60;/h3><br>
-                &#60;div><br>
-                &#60;p id="p1">This is a paragraph. &#60;/p><br>
-                &#60;p id="p2">This is another paragraph. &#60;/p><br>
-                &#60;/div><br><br>
-                &#60;button onclick="myFunction()">Remove Element&#60;/button><br><br>
-                &#60;script><br>
-                function myFunction() {<br>
-                document.getElementById("p1").remove();<br>
-                }<br>
-                &#60;/script><br></p><br>
-              </div>
-                <br>
-              <div class="resume-item resume-item pb-0">
-                <h4>Ejemplo 2:</h4><br>
-                &#60;h2>JavaScript HTML DOM&#60;/h2><br>
-                &#60;p>Remove Child Element&#60;/p><br><br>
-                &#60;div id="div1"><br>
-                &#60;p id="p1">This is a paragraph. &#60;/p><br>
-                &#60;p id="p2">This is another paragraph. &#60;/p><br>
-                &#60;/div><br><br>
-                &#60;script><br>
-                const parent = document.getElementById("div1");<br>
-                const child = document.getElementById("p1");<br>
-                parent.removeChild(child);<br>
-                &#60;/script><br></p><br>
-              </div>
-  
-            </div>
-          </div>
-  
-        </div><!-- End About Me -->
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Ejemplo</h2>
-          <br>
-          <p>Ejemplo explicado </p>
-          <div class="row">
-            <h3 class="col-lg-6">Ejemplo 1</h3>
-            <h3 class="col-lg-6">Ejemplo 2</h3><br>
-          </div>
-        </div>
         <br>
+
+        <div class="resume">
+          <hr>
+          <h5>La length propiedad es útil cuando desea recorrer los elementos de una colección:</h5>
+          <p><li>Cambia el color del texto de todos los elementos &#60;p>:</li></p>
+        </div>
+        <hr><br>
         <div class="row">
-          <div class="col-lg-6">
-            <div class="resume-item pb-0">
-              <h4>El documento HTML contiene un &#60;div> elemento con dos nodos secundarios (dos &#60;p> elementos):</h4>
-              <p>
-                <em>&#60;div></em><br>
-                <em>&#60;p id="p1">This is a paragraph.&#60;/p></em><br>
-                <em>&#60;p id="p2">This is another paragraph.&#60;/p></em><br>
-                <em>&#60;/div></em><br>
-              </p>
-            </div>
+          <div class="col-lg-6" data-aos="fade-right">
             <br>
-            <div class="resume-item">
-              <h4>Busque el elemento que desea eliminar:</h4>
-              <p><em>const elmnt = document.getElementById("p1");</em></p>
-            </div>
-            <br>
+            <div class="resume-item resume-item pb-0">
+              <h4>Ejemplo:</h4><br>
+              <h2>JavaScript HTML DOM</h2>
+              <p>Hello World!</p>
+              <p>Hello Norway!</p>
+              <p>Click the button to change the color of all p elements.</p>
+              
+              <button onclick="myFunction()">Try it</button>
 
-            <div class="resume-item">
-              <h4>Luego ejecute el método remove() en ese elemento:</h4>
-              <p><em>elmnt.remove();</em></p>
+              <script>
+                function myFunction() {
+                  const myCollection = document.getElementsByTagName("p");
+                  for (let i = 0; i < myCollection.length; i++) {
+                    myCollection[i].style.color = "red";
+                  }
+                }
+              </script>
+              
+              <br>
             </div>
           </div>
 
-          
-          <div class="col-lg-6">
-            <div class="resume-item pb-0">
-              <h4>El documento HTML contiene un &#60;div> elemento con dos nodos secundarios (dos &#60;p> elementos):</h4>
-              <p>
-                <em>&#60;div id="div1"></em><br>
-                <em>&#60;p id="p1">This is a paragraph.&#60;/p></em><br>
-                <em>&#60;p id="p2">This is another paragraph.&#60;/p></em><br>
-                <em>&#60;/div></em><br>
-              </p>
-            </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
             <br>
-            <div class="resume-item">
-              <h4>Encuentre el elemento con id="div1":</h4>
-              <p><em>const parent = document.getElementById("div1");</em></p>
+            <div class="resume-item resume-item pb-0">
+              <h4>Código:</h4><br>
+              <p> &#60;h2>JavaScript HTML DOM&#60;/h2><br>
+              &#60;p>Hello World!&#60;/p><br>
+              &#60;p>Hello Norway!&#60;/p><br>
+              &#60;p>Click the button to change the color of all p elements.&#60;/p><br>
+              <br>
+              &#60;button onclick="myFunction()">Try it&#60;/button><br>
+              <br>
+              &#60;script><br>
+                function myFunction() {<br>
+                  const myCollection = document.getElementsByTagName("p");<br>
+                  for (let i = 0; i < myCollection.length; i++) {<br>
+                    myCollection[i].style.color = "red";<br>
+                  }<br>
+                }<br>
+              &#60;/script><br></p><br>
             </div>
-            <br>
-
-            <div class="resume-item">
-              <h4>Encuentre el &#60;p> elemento con id="p1":</h4>
-              <p><em>const child = document.getElementById("p1");</em></p>
-            </div>
-
-            <div class="resume-item">
-              <h4>Eliminar el hijo del padre:</h4>
-              <p><em>parent.removeChild(child);</em></p>
-            </div>
-
-            <div class="resume-item">
-              <h4>Aquí hay una solución común: busque el elemento secundario que desea eliminar y use su parentNodepropiedad para encontrar el elemento principal:</h4>
-              <p>
-                <em>const child = document.getElementById("p1");</em><br>
-                <em>child.parentNode.removeChild(child);</em><br>
-              </p>
-            </div>
+              <br>
           </div>
         </div>
 
-      </div>
-    </section><!-- End Portfolio Section -->
+      </div><!-- End About Me -->
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="resume">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Eliminación</h2>
-          <p>Eliminación de elementos HTML existentes</p>
-          <h6>Para eliminar un elemento HTML, utilice el remove() método:</h6>
-        </div>
-
-        <div class="about-me container">
-          <div class="row">
-            <div class="col-lg-6" data-aos="fade-right">
-              <div class="resume-item resume-item pb-0">
-                <h4>Ejemplo 1</h4>
-                <h2>JavaScript HTML DOM</h2>
-                <h3>Replace an HTML Element.</h3>
-                
-                <div id="div1">
-                <p id="p1">This is a paragraph.</p>
-                <p id="p2">This is a paragraph.</p>
-                </div>
-                
-                <script>
-                const parent2 = document.getElementById("div1");
-                const child2 = document.getElementById("p1");
-                const para2 = document.createElement("p");
-                const node2 = document.createTextNode("This is new.");
-                para2.appendChild(node2);
-                parent2.replaceChild(para2,child2);
-                </script>
-              </div>
-              <br><br>
-            </div>
-  
-            <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
-              <div class="resume-item resume-item pb-0">
-                <h4>Ejemplo:</h4><br>
-                <p> &#60;h2>JavaScript HTML DOM&#60;/h2><br>
-                &#60;h3>Remove an HTML Element.&#60;/h3><br>
-                &#60;div id="div1"><br>
-                &#60;p id="p1">This is a paragraph. &#60;/p><br>
-                &#60;p id="p2">This is another paragraph. &#60;/p><br>
-                &#60;/div><br><br>
-                &#60;script><br>
-                const parent = document.getElementById("div1");<br>
-                const child = document.getElementById("p1");<br>
-                const para = document.createElement("p");<br>
-                const node = document.createTextNode("This is new.");<br>
-                para.appendChild(node);<br>
-                parent.replaceChild(para,child);<br>
-                &#60;/script><br></p><br>
-              </div>
-                <br>
-            </div>
-          </div>
-  
-        </div><!-- End About Me -->
-
-      </div>
-    </section><!-- End Contact Section -->
+    </section><!-- End Resume Section -->
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
