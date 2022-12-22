@@ -81,16 +81,15 @@
          <div class="row">
             <div class="col-md-6">
                <div class="about_taital_main">
-                  <h1 class="about_taital">Sintaxis fadeToggle() </h1>
+                  <h1 class="about_taital">Sintaxis slideToggle() </h1>
                   <div class="col-md-12" style="border-style: solid;">
-                     <h2>$(selector).fadeToggle(speed,callback);</h2>
+                     <h2>$(selector).slideToggle(speed,callback);</h2>
                   </div>
                   <h3 class="about_text">
-                  El método jQuery fadeToggle()alterna entre los métodos fadeIn()y .fadeOut() <br>
-                  Si los elementos se desvanecen, fadeToggle()se desvanecerán. <br>
-                  Si los elementos se desvanecen, fadeToggle()se desvanecerán. <br>
-                  El parámetro de velocidad opcional especifica la duración del efecto. Puede tomar los siguientes valores: "lento", "rápido" o milisegundos. <br>
-                  El parámetro de devolución de llamada opcional es una función que se ejecutará después de que se complete el desvanecimiento.</h3>
+                  El método jQuery slideToggle()alterna entre los métodos slideDown()y .slideUp() <br>
+                  El parámetro de velocidad opcional puede tomar los siguientes valores: "lento", "rápido", milisegundos.br <br>
+                  El parámetro de devolución de llamada opcional es una función que se ejecutará después de que se complete el deslizamiento.
+                  </h3>
 
                   <h2>Ejemplo:</h2>
                   <div class="col-md-12" style="border-style: solid;">
@@ -104,23 +103,29 @@
                            &#60;/script><br>
                            &#60;script> <br>
                            $(document).ready(function(){ <br>
-                             $("button").click(function(){ <br>
-                               $("#div1").fadeToggle(); <br>
-                               $("#div2").fadeToggle("slow"); <br>
-                               $("#div3").fadeToggle(3000); <br>
+                             $("#flip").click(function(){ <br>
+                               $("#panel").slideToggle("slow"); <br>
                              }); <br>
                            }); <br>
                            &#60;/script><br>
+                           &#60;style>
+                           panel, #flip { <br>
+                             padding: 5px; <br>
+                             text-align: center;
+                             background-color: #e5eecc; <br>
+                             border: solid 1px #c3c3c3; <br>
+                           } <br>
+
+                           #panel { <br>
+                             padding: 50px; <br>
+                             display: none; <br>
+                           } <br>
+                           &#60;/style> <br>
                            &#60;/head><br>
                            &#60;body><br>
 
-                           &#60;p>Demonstrate fadeToogle() with different parameters. /p>
-
-                           &#60;button>Click to fade in/out boxes /button><br>
-
-                           &#60;div id="div1" style="width:80px;height:80px;display:none;background-color:red;"> /div><br>
-                           &#60;div id="div2" style="width:80px;height:80px;display:none;background-color:green;"> /div><br>
-                           &#60;div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"> /div>
+                           &#60;div id="flip">Click to slide down or up panel /div> <br>
+                           &#60;div id="panel">Hello world! /div>
                         </p>
                      </div>
                </div>
@@ -131,19 +136,27 @@
                <div class="about_taital_main">
                   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
                   <script>
-                  $(document).ready(function(){
-                    $("button").click(function(){
-                      $("#div1").fadeToggle();
-                      $("#div2").fadeToggle("slow");
-                      $("#div3").fadeToggle(3000);
+                   $(document).ready(function(){
+                    $("#flip").click(function(){
+                      $("#panel").slideToggle("slow");
                     });
                   });
                   </script>
-                  <p>Demostrar fadeToggle() con diferentes parametros.</p>
-                  <button>Click para desvanecer las cajas</button><br><br>
-                  <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
-                  <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
-                  <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+                  <style> 
+                  #panel, #flip {
+                    padding: 5px;
+                    text-align: center;
+                    background-color: #e5eecc;
+                    border: solid 1px #c3c3c3;
+                  }
+
+                  #panel {
+                    padding: 50px;
+                    display: none;
+                  }
+                  </style>
+                  <div id="flip">Click to slide down or up panel</div>
+                  <div id="panel">Hello world!</div>
                </div>
             </div>
          </div>
