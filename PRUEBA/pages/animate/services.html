@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
    <!-- basic -->
@@ -10,7 +10,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
-   <title>Services</title>
+   <title>About</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -41,7 +41,7 @@
       <div class="header_main">
          <div class="mobile_menu">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-               <div class="logo_mobile"><a href="index.html"><img src="images/logo.png"></a></div>
+
                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                   aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -49,93 +49,130 @@
                <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
                      <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">INICIO</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="./about.html">Método animate()</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="services.html">Services</a>
+                        <a class="nav-link" href="services.html">Propiedades</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link " href="blog.html">Blog</a>
+                        <a class="nav-link " href="blog.html">Valores</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link " href="contact.html">Contact</a>
+                        <a class="nav-link " href="contact.html">Funcionalidad de cola</a>
                      </li>
                   </ul>
                </div>
             </nav>
          </div>
          <div class="container-fluid">
-            <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+            <div class="logo"><a href="index.html">
+                  <h1 class="about_taital" style="color: white;">jQuery Effects - Animation</h1>
+               </a></div>
             <div class="menu_main">
                <ul>
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li><a href="about.html">About</a></li>
-                  <li><a href="services.html">Services</a></li>
-                  <li><a href="blog.html">Blog</a></li>
-                  <li><a href="contact.html">Contact us</a></li>
+                  <li><a href="index.html">INICIO</a></li>
+                  <li><a href="./about.html">Método animate()</a></li>
+                  <li><a href="services.html">Propiedades</a></li>
+                  <li><a href="blog.html">Valores</a></li>
+                  <li><a href="contact.html">Funcionalidad de cola</a></li>
                </ul>
             </div>
          </div>
       </div>
    </div>
    <!-- header section end -->
-   <!-- services section start -->
-   <div class="services_section layout_padding">
-      <div class="container">
-         <h1 class="services_taital">Services </h1>
-         <p class="services_text">There are many variations of passages of Lorem Ipsum available, but the majority have
-            suffered alteration</p>
-         <div class="services_section_2">
-            <div class="row">
-               <div class="col-md-4">
-                  <div><img src="images/img-1.png" class="services_img"></div>
-                  <div class="btn_main"><a href="#">Rafting</a></div>
-               </div>
-               <div class="col-md-4">
-                  <div><img src="images/img-2.png" class="services_img"></div>
-                  <div class="btn_main active"><a href="#">Hiking</a></div>
-               </div>
-               <div class="col-md-4">
-                  <div><img src="images/img-3.png" class="services_img"></div>
-                  <div class="btn_main"><a href="#">Camping</a></div>
-               </div>
-            </div>
-         </div>
-      </div>
+   <!-- about section start -->
+   <div class="container">
+      <center><b style="font-size: 30px;">jQuery animate () - Manipular múltiples propiedades</b></center>
+      <p>
+         Tenga en cuenta que se pueden animar varias propiedades al mismo tiempo: <br>
+      </p>
    </div>
-   <!-- services section end -->
+   <br>
+   <section id="resume">
+      <div class="about-me container">
+         <hr>
+         <div class="row">
+            <div class="col-lg-6" data-aos="fade-right">
+               <br>
+               <h4>Ejemplo:</h4><br>
+               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+               <script> 
+               $(document).ready(function(){
+                 $("button").click(function(){
+                   $("div").animate({
+                     left: '250px',
+                     opacity: '0.5',
+                     height: '150px',
+                     width: '150px'
+                   });
+                 });
+               });
+               </script> 
+               
+               <button>Start Animation</button>
+               
+               <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+               
+               <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
+
+              
+            </div> 
+            
+
+            <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+              <div class="resume-item resume-item pb-0">
+                <h4>Código:</h4><br>
+                <p>
+                  &#60;!DOCTYPE html><br>
+                  &#60;html><br>
+                  &#60;head><br>
+                  &#60;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">&#60;/script><br>
+                  &#60;script> <br>
+                  $(document).ready(function(){<br>
+                    $("button").click(function(){<br>
+                      $("div").animate({<br>
+                        left: '250px',<br>
+                        opacity: '0.5',<br>
+                        height: '150px',<br>
+                        width: '150px'<br>
+                      });<br>
+                    });<br>
+                  });<br>
+                  &#60;/script> <br>
+                  &#60;/head><br>
+                  &#60;body><br>
+                  
+                  &#60;button>Start Animation&#60;/button><br>
+                  
+                  &#60;p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!&#60;/p><br>
+                  
+                  &#60;div style="background:#98bf21;height:100px;width:100px;position:absolute;">&#60;/div><br>
+                  
+                  &#60;/body><br>
+                  &#60;/html><br>
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- End About Me -->
+      </div>
+    </section><!-- End Resume Section -->
+   <!-- about section end -->
    <!-- footer section start -->
    <div class="footer_section layout_padding">
       <div class="container">
-         <div class="input_btn_main">
-            <input type="text" class="mail_text" placeholder="Enter your email" name="Enter your email">
-            <div class="subscribe_bt"><a href="#">Subscribe</a></div>
-         </div>
-         <div class="location_main">
-            <div class="call_text"><img src="images/call-icon.png"></div>
-            <div class="call_text"><a href="#">Call +01 1234567890</a></div>
-            <div class="call_text"><img src="images/mail-icon.png"></div>
-            <div class="call_text"><a href="#">demo@gmail.com</a></div>
-         </div>
-         <div class="social_icon">
-            <ul>
-               <li><a href="#"><img src="images/fb-icon.png"></a></li>
-               <li><a href="#"><img src="images/twitter-icon.png"></a></li>
-               <li><a href="#"><img src="images/linkedin-icon.png"></a></li>
-               <li><a href="#"><img src="images/instagram-icon.png"></a></li>
-            </ul>
-         </div>
       </div>
    </div>
    <!-- footer section end -->
    <!-- copyright section start -->
    <div class="copyright_section">
       <div class="container">
-         <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html
-               Templates</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a></p>
+         <p class="copyright_text">2020 All Rights Reserved. Design by Grupo03</a></p>
       </div>
    </div>
    <!-- copyright section end -->
