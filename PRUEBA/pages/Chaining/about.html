@@ -10,7 +10,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
    <!-- site metas -->
-   <title>About</title>
+   <title>Método Encadenamiento</title>
    <meta name="keywords" content="">
    <meta name="description" content="">
    <meta name="author" content="">
@@ -61,7 +61,7 @@
                         <a class="nav-link " href="blog.html">Valores</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link " href="contact.html">Funcionalidad de cola</a>
+                        <a class="nav-link " href="contact.html">jQuery - Encadenamiento</a>
                      </li>
                   </ul>
                </div>
@@ -69,15 +69,12 @@
          </div>
          <div class="container-fluid">
             <div class="logo"><a href="index.html">
-                  <h1 class="about_taital" style="color: white;">jQuery Effects - Animation</h1>
+                  <h1 class="about_taital" style="color: white;">jQuery - Encadenamiento</h1>
                </a></div>
             <div class="menu_main">
                <ul>
                   <li><a href="index.html">INICIO</a></li>
-                  <li><a href="./about.html">Método animate()</a></li>
-                  <li><a href="services.html">Propiedades</a></li>
-                  <li><a href="blog.html">Valores</a></li>
-                  <li><a href="contact.html">Funcionalidad de cola</a></li>
+                  <li><a href="./about.html">Método Encadenamiento</a></li>
                </ul>
             </div>
          </div>
@@ -86,12 +83,18 @@
    <!-- header section end -->
    <!-- about section start -->
    <div class="container">
-      <center><b style="font-size: 30px;">jQuery animate () - Utiliza la funcionalidad de cola</b></center>
-         <p>
-            Por defecto, jQuery viene con funcionalidad de cola para animaciones. <br>
-            Esto significa que si escribe varias animate()llamadas una tras otra, jQuery crea una cola "interna" con estas llamadas de método. Luego ejecuta las llamadas animadas UNO por UNO. <br><br>
-            Entonces, si desea realizar diferentes animaciones una después de la otra, aprovechamos la función de cola:<br>
-         </p>
+      <center><b style="font-size: 30px;">Método jQuery Encadenamiento</b></center>
+      <p>
+         Hasta ahora hemos estado escribiendo declaraciones jQuery una a la vez (una tras otra). <br>
+
+Sin embargo, existe una técnica llamada encadenamiento, que nos permite ejecutar varios comandos de jQuery, uno tras otro, en los mismos elementos. <br>
+
+Sugerencia: De esta manera, los navegadores no tienen que encontrar los mismos elementos más de una vez. <br>
+
+Para encadenar una acción, simplemente agregue la acción a la acción anterior. <br><br>
+
+El siguiente ejemplo encadena los métodos css(), slideUp()y . slideDown()El elemento "p1" primero cambia a rojo, luego se desliza hacia arriba y luego hacia abajo:
+      </p>
    </div>
    <br>
    <section id="resume">
@@ -104,23 +107,20 @@
               <h4>Ejemplo:</h4><br>
 
               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-              <script> 
+              <script>
               $(document).ready(function(){
                 $("button").click(function(){
-                  var div = $("div");
-                  div.animate({height: '300px', opacity: '0.4'}, "slow");
-                  div.animate({width: '300px', opacity: '0.8'}, "slow");
-                  div.animate({height: '100px', opacity: '0.4'}, "slow");
-                  div.animate({width: '100px', opacity: '0.8'}, "slow");
+                  $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
                 });
               });
-              </script> 
+              </script>
+              </head>
+              <body>
               
-              <button>Start Animation</button>
+              <p id="p1">jQuery is fun!!</p>
               
-              <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+              <button>Click me</button>
               
-              <div style="background:#98bf21;height:100px;width:100px;position:absolute;"></div>
             </div> 
           </div>
 
@@ -128,29 +128,23 @@
               <div class="resume-item resume-item pb-0">
                 <h4>Código:</h4><br>
                 <p>
-                  &#60;!DOCTYPE html><br><br>
+                  &#60;!DOCTYPE html><br>
                   &#60;html><br>
-                     &#60;head><br>
+                  &#60;head><br>
                      &#60;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">&#60;/script><br>
-                     &#60;script> <br>
+                     &#60;script><br>
                      $(document).ready(function(){<br>
                        $("button").click(function(){<br>
-                         var div = $("div");<br>
-                         div.animate({height: '300px', opacity: '0.4'}, "slow");<br>
-                         div.animate({width: '300px', opacity: '0.8'}, "slow");<br>
-                         div.animate({height: '100px', opacity: '0.4'}, "slow");<br>
-                         div.animate({width: '100px', opacity: '0.8'}, "slow");<br>
+                         $("#p1").css("color", "red").slideUp(2000).slideDown(2000);<br>
                        });<br>
                      });<br>
-                     &#60;/script> <br>
+                     &#60;/script><br>
                      &#60;/head><br>
                      &#60;body><br>
                      
-                     &#60;button>Start Animation&#60;/button><br>
+                     &#60;p id="p1">jQuery is fun!!&#60;/p><br>
                      
-                     &#60;p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!&#60;/p><br>
-                     
-                     &#60;div style="background:#98bf21;height:100px;width:100px;position:absolute;">&#60;/div><br>
+                     &#60;button>Click me&#60;/button><br>
                      
                      &#60;/body><br>
                      &#60;/html><br>
@@ -158,66 +152,74 @@
               </div>
             </div>
           </div>
-          <hr>
-          <div class="row">
-            <div class="col-lg-6" data-aos="fade-right">
-              <br>
-              <div class="resume-item resume-item pb-0">
-                <h4>Ejemplo2:</h4><br>
-  
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-                <script> 
-                $(document).ready(function(){
-                  $("button").click(function(){
-                    var div = $("div");  
-                    div.animate({left: '100px'}, "slow");
-                    div.animate({fontSize: '3em'}, "slow");
-                  });
-                });
-                </script> 
 
-                
-                <button>Start Animation</button>
-                
-                <p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
-                
-                <div style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div>
-              </div> 
-            </div>
-  
-              <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
-                <div class="resume-item resume-item pb-0">
-                  <h4>Código:</h4><br>
-                  <p>
-                    &#60;!DOCTYPE html><br><br>
-                    &#60;html>
-                     &#60;head>
-                     &#60;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">&#60;/script>
-                     &#60;script> 
-                     $(document).ready(function(){
-                       $("button").click(function(){
-                         var div = $("div");  
-                         div.animate({left: '100px'}, "slow");
-                         div.animate({fontSize: '3em'}, "slow");
-                       });
-                     });
-                     &#60;/script> 
-                     &#60;/head>
-                     &#60;body>
+          <hr>
+
+          <p>
+            También podríamos haber agregado más llamadas a métodos si fuera necesario. <br>
+
+Sugerencia : al encadenar, la línea de código puede volverse bastante larga. Sin embargo, jQuery no es muy estricto con la sintaxis; puede darle el formato que desee, incluidos los saltos de línea y las sangrías. <br><br>
+
+Esto también funciona bien: <br>
+          </p>
+
+          <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <br>
+            <div class="resume-item resume-item pb-0">
+              <h4>Ejemplo:</h4><br>
+
+              <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+              <script>
+              $(document).ready(function(){
+                $("button").click(function(){
+                  $("#p11").css("color", "red")
+                    .slideUp(2000)
+                    .slideDown(2000);
+                });
+              });
+              </script>
+              </head>
+              <body>
+              
+              <p id="p11">jQuery is fun!!</p>
+              
+              <button>Click me</button>
+              
+            </div> 
+          </div>
+
+            <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+              <div class="resume-item resume-item pb-0">
+                <h4>Código:</h4><br>
+                <p>
+                  &#60;!DOCTYPE html><br>
+                  &#60;html><br>
+                     &#60;head><br>
+                     &#60;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js">&#60;/script><br>
+                     &#60;script><br>
+                     $(document).ready(function(){<br>
+                       $("button").click(function(){<br>
+                         $("#p1").css("color", "red")<br>
+                           .slideUp(2000)<br>
+                           .slideDown(2000);<br>
+                       });<br>
+                     });<br>
+                     &#60;/script><br>
+                     &#60;/head><br>
+                     &#60;body><br>
                      
-                     &#60;button>Start Animation&#60;/button>
+                     &#60;p id="p1">jQuery is fun!!&#60;/p><br>
                      
-                     &#60;p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!&#60;/p>
+                     &#60;button>Click me&#60;/button><br>
                      
-                     &#60;div style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO&#60;/div>
+                     &#60;/body><br>
+                     &#60;/html><br>
                      
-                     &#60;/body>
-                     &#60;/html>
-                  </p>
-                </div>
+                </p>
               </div>
             </div>
-  
+          </div>
 
         </div><!-- End About Me -->
       </div>
