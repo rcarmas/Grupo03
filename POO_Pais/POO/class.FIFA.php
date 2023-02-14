@@ -3,7 +3,7 @@
 
 include_once('interface.Organizacion.php');
 
-class UEFA extends Pais implements Organizacion{
+class FIFA extends Pais implements Organizacion{
 		
     private $campeon;      // LA CARA
     private $subcampeon;   // Numero total de ciudades que tiene un pais
@@ -32,8 +32,8 @@ function __construct($campeon,$subcampeon,$NomPais,$data){
 
   public function imprimirONG()
   {
-    $html ='<p>El campeón de la UEFA CHAMPIONS LEAGUE es: '. $this->campeon .'</p>';
-    $html .='<p>El subcampeón de la UEFA CHAMPIONS LEAGUE es: '. $this->subcampeon .'</p>';
+    $html ='<p>El campeón del MUNDIAL DE CLUBES DE LA FIFA es: '. $this->campeon .'</p>';
+    $html .='<p>El subcampeón del MUNDIAL DE CLUBES DE LA FIFA es: '. $this->subcampeon .'</p>';
     echo $html;
   }
  

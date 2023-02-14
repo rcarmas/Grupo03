@@ -20,7 +20,9 @@
 	 
 	 include_once("POO/class.Nacion.php");
 	 include_once("POO/class.Pais.php");	
-	 include_once("POO/class.UEFA.php");			   
+	 include_once("POO/class.UEFA.php");	
+	 include_once("POO/class.CONCACAF.php");		   
+	 include_once("POO/class.FIFA.php");	
 	 
 	 $titulo = ["ECUADOR","ESTADOS UNIDOS","ARGENTINA","COLOMBIA"];
 	 $organizaciones=["UEFA","CONCACAF","FIFA"];
@@ -43,7 +45,6 @@
 	 												'PENSILVANNIA' => ["FILALDEFIA","PISTBURG"],
 		  											'FLORIDA' => ["MIAMI","ORLANDO","TAMPA","FORT LOUDARLE"],
 		 											'COLORADO' =>["GOLDEN","AVON","DURANGO","COMMERCECITY","STERLING","PUEBLOWEST"]) );
-
 
 	 $ciudadesCOL = array ('COLOMBIA' => array('ANTIOQUIA' => ["MEDELLIN","PASTO"],
 	 											'ARAUCA' => ["RUMBA","BOGOTA","BARANQUILLA"] ));
@@ -73,6 +74,20 @@
 								   'AFRICA' => null,
 								   'ASIA' => null,
 								   'OCEANIA' => null));
+
+	 $CONCACAF = array ('CONCACAF' =>array('AMERICA' => ["USA","MEXICO"],
+								   'EUROPA' => null,
+								   'AFRICA' => null,
+								   'ASIA' => null,
+								   'OCEANIA' => null));
+
+	 $FIFA = array ('MUNDIAL CLUBES' =>array('AMERICA' => ["USA","BRASIL"],
+								   'EUROPA' => ["ESPAÑA"],
+								   'AFRICA' => ["MARRUECOS","EGIPTO"],
+								   'ASIA' => ["ARABIA SAUDITA"],
+								   'OCEANIA' => ["AUSTRALIA"]));
+
+	 
 	
 	 
 	$objECU = new Pais($titulo[0],$ciudadesECU);
@@ -80,15 +95,20 @@
 	$objARG = new Pais($titulo[2],$ciudadesARG);
 	$objCOL = new Pais($titulo[3],$ciudadesCOL);
 	$objUEFA = new UEFA('Real Madrid','Liverpool',$organizaciones[0],$UEFA);
+	$objCONCACAF = new CONCACAF('Seattle Sounders','Pumas',$organizaciones[1],$CONCACAF);
+	$objFIFA = new FIFA('Real Madrid','Al Hihal',$organizaciones[2],$FIFA);
+
+	$objOrganizaciones = [$objUEFA,$objCONCACAF,$objFIFA];
+
 
 //ECUADOR
-for($i = 0;$i < count($objUEFA);$i++){
+for($i = 0;$i < count($objOrganizaciones);$i++){
 	$html='<h2>';
-	$html .= $objUEFA->GetNombPais(). '</h2>';
+	$html .= $objOrganizaciones[$i]->GetNombPais(). '</h2>';
 	echo $html;
 	
 	// IMPRIME EL NUMERO DE CANTONES
-	$cara = $objUEFA->GetCiudades();
+	$cara = $objOrganizaciones[$i]->GetCiudades();
 	
 	/*
 	echo "<pre>";
@@ -96,12 +116,14 @@ for($i = 0;$i < count($objUEFA);$i++){
 	echo "</pre>";  
 	*/
 	
-	$objUEFA->CalcularMaxColum($cara);
+	$objOrganizaciones[$i]->CalcularMaxColum($cara);
 	echo "NUMERO DE PROVINCIAS: " . count($cara) . "<br>";
-	echo "NUMERO DE CANTONES: " . $objUEFA->GetNumCuidades() . "<br>";	
+	echo "NUMERO DE CANTONES: " . $objOrganizaciones[$i]->GetNumCuidades() . "<br>";	
 	
 	//IMPRIMIR LA TABLA DE DATOS
-	$objUEFA->ImprimirNacion();
+	$objOrganizaciones[$i]->imprimirONG();
+	$objOrganizaciones[$i]->ImprimirNacion();
+	
 }
 
 ?>                    
