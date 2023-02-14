@@ -62,7 +62,7 @@
 				$tam = count($data);
 				// TITULO DE LA TABLA
 				$html.=' <tr>  
-						 <th colspan=" ' . $tam . '" bgcolor="#EC7063"> ' . $this->GetNombPais() . ' </th>
+						 <th colspan=" ' . $tam . '" bgcolor="#EC7063"> ' . $this->GetNombPais() . '</th>
 						 </tr>';
 						 
 				// IMPRIMIR LA CABECERA
@@ -73,7 +73,7 @@
 				for($f=0;$f < $this->GetNumCuidades(); $f++){   // $max para recorrer hacia abajo
 					$html.='<tr>';
 					 foreach($data as $c)
-						 $html.=( isset($c[$f]) ) ? '<td bgcolor="#D6FAF2">' . $c[$f] . '</td>' : '<td bgcolor="#D6DEFA">&nbsp;</td>';     
+						 $html.=( isset($c[$f]) ) ? '<td bgcolor="#D6FAF2"> <a href="./POO/class.'. $this->GetNombPais() .'.php">' . $c[$f] . '</a> </td>' : '<td bgcolor="#D6DEFA">&nbsp;</td>';     
 					$html.='</tr>';
 				}	
 			}	
