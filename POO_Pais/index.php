@@ -69,19 +69,19 @@
 											'SEPTENTRIONAL' => ["AMSTERDAN","HAARLEM","ALKAMARR","DEN HELDER"],
 											'NAPOLES' => ["LEEUWARDEN","HEERENVEEN"]));
 	
-	 $UEFA = array ('UEFA' =>array('AMERICA' => null,
+	 $PaisesUEFA = array ('UEFA' =>array('AMERICA' => null,
 								   'EUROPA' => ["ITALIA","ESPAÑA","HOLANDA"],
 								   'AFRICA' => null,
 								   'ASIA' => null,
 								   'OCEANIA' => null));
 
-	 $CONCACAF = array ('CONCACAF' =>array('AMERICA' => ["USA","MEXICO"],
+	 $PaisesCONCACAF = array ('CONCACAF' =>array('AMERICA' => ["USA","MEXICO"],
 								   'EUROPA' => null,
 								   'AFRICA' => null,
 								   'ASIA' => null,
 								   'OCEANIA' => null));
 
-	 $FIFA = array ('MUNDIAL CLUBES' =>array('AMERICA' => ["USA","BRASIL"],
+	 $PaisesFIFA = array ('MUNDIAL CLUBES' =>array('AMERICA' => ["USA","BRASIL"],
 								   'EUROPA' => ["ESPAÑA"],
 								   'AFRICA' => ["MARRUECOS","EGIPTO"],
 								   'ASIA' => ["ARABIA SAUDITA"],
@@ -94,21 +94,21 @@
 	$objUSA = new Pais($titulo[1],$ciudadesUSA);
 	$objARG = new Pais($titulo[2],$ciudadesARG);
 	$objCOL = new Pais($titulo[3],$ciudadesCOL);
-	$objUEFA = new UEFA('Real Madrid','Liverpool',$organizaciones[0],$UEFA);
-	$objCONCACAF = new CONCACAF('Seattle Sounders','Pumas',$organizaciones[1],$CONCACAF);
-	$objFIFA = new FIFA('Real Madrid','Al Hihal',$organizaciones[2],$FIFA);
+	$objUEFA = new UEFA('Real Madrid','Liverpool',$organizaciones[0],$PaisesUEFA);
+	$objCONCACAF = new CONCACAF('Seattle Sounders','Pumas',$organizaciones[1],$PaisesCONCACAF);
+	$objFIFA = new FIFA('Real Madrid','Al Hilal',$organizaciones[2],$PaisesFIFA);
 
-	$objOrganizaciones = [$objUEFA,$objCONCACAF,$objFIFA];
+	$ArrayObj = [$objUEFA,$objCONCACAF,$objFIFA];
 
 
 //ECUADOR
-for($i = 0;$i < count($objOrganizaciones);$i++){
+for($i = 0;$i < count($ArrayObj);$i++){
 	$html='<h2>';
-	$html .= $objOrganizaciones[$i]->GetNombPais(). '</h2>';
+	$html .= $ArrayObj[$i]->GetNombPais(). '</h2>';
 	echo $html;
 	
 	// IMPRIME EL NUMERO DE CANTONES
-	$cara = $objOrganizaciones[$i]->GetCiudades();
+	$cara = $ArrayObj[$i]->GetCiudades();
 	
 	/*
 	echo "<pre>";
@@ -116,13 +116,13 @@ for($i = 0;$i < count($objOrganizaciones);$i++){
 	echo "</pre>";  
 	*/
 	
-	$objOrganizaciones[$i]->CalcularMaxColum($cara);
-	echo "NUMERO DE PROVINCIAS: " . count($cara) . "<br>";
-	echo "NUMERO DE CANTONES: " . $objOrganizaciones[$i]->GetNumCuidades() . "<br>";	
+	$ArrayObj[$i]->CalcularMaxColum($cara);
+	//echo "NUMERO DE PROVINCIAS: " . count($cara) . "<br>";
+	//echo "NUMERO DE CANTONES: " . $objOrganizaciones[$i]->GetNumCuidades() . "<br>";	
 	
 	//IMPRIMIR LA TABLA DE DATOS
-	$objOrganizaciones[$i]->imprimirONG();
-	$objOrganizaciones[$i]->ImprimirNacion();
+	$ArrayObj[$i]->imprimirONG();
+	$ArrayObj[$i]->ImprimirNacion();
 	
 }
 
