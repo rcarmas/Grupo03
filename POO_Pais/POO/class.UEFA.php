@@ -35,6 +35,7 @@ function __construct($campeon,$subcampeon,$NomPais,$data){
     $html ='<p>El campeón de la UEFA CHAMPIONS LEAGUE es: '. $this->campeon .'</p>';
     $html .='<p>El subcampeón de la UEFA CHAMPIONS LEAGUE es: '. $this->subcampeon .'</p>';
     echo $html;
+    
   }
  
 
