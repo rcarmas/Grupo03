@@ -12,7 +12,6 @@ class Pais extends Nacion
 		parent::__construct($NomPais, count($data));
 		$tope = count($data);
 		$this->ciudades = $data;
-
 	}
 
 	// IMPLEMENTAR METODOS	
@@ -37,9 +36,13 @@ class Pais extends Nacion
 	public function CalcularMaxColum($cara)
 	{
 		$maxColum = null;
-		foreach ($cara as $arreglo) {
+		foreach ($cara as $indice => $arreglo) {
 			// $numProv = count($data[$prov]);
-			$tam = count($cara);
+			if (isset($cara[$indice]))
+				$tam = count($cara[$indice]);
+			else
+				$tam = 0;
+
 			$maxColum = ($maxColum >= $tam) ? $maxColum : $tam;
 		}
 
@@ -57,7 +60,7 @@ class Pais extends Nacion
 
 			// ALGORITMO PARA LA CABECERA				   
 			$html = '
-				<table border=1 alingn="center" action="">
+				<center><table border=1 alingn="center" action="">
 				<tr>';
 
 			//CALCULO EL MAXIMO DE LAS COLUMAS DE LA MATRIZ
@@ -77,18 +80,14 @@ class Pais extends Nacion
 			for ($f = 0; $f < $this->GetNumCuidades(); $f++) { // $max para recorrer hacia abajo
 				$html .= '<tr>';
 				foreach ($data as $c)
-					$html .= (isset($c[$f])) ? '<td bgcolor="#D6FAF2"> <a href="./procesar.php?dato=' . $this->GetNombPais() . '">' . $c[$f] . '</a> </td>' : '<td bgcolor="#D6DEFA">&nbsp;</td>';
+					$html .= (isset($c[$f])) ? '<td bgcolor="#D6FAF2"> <a href="./ciudades.php?dato=' . $c[$f] . '">' . $c[$f] . '</a> </td>' : '<td bgcolor="#D6DEFA">&nbsp;</td>';
 				$html .= '</tr>';
 			}
 		}
 		$html .= "</tr>";
-		$html .= "</table>";
+		$html .= "</table></center>";
 		$html .= "<br> <br>";
 
 		echo $html;
 	}
-
-
-
 }
-?>
