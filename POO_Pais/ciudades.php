@@ -31,9 +31,9 @@
 
 			for ($i = 0; $i < count($ciudad); $i++) {
 				$html .= '<tr>';
-				foreach ($ciudad as  $indice => $data)
+				foreach ($ciudad as  $indice => $data) {
 					$html .= (isset($data[$i])) ? '<td bgcolor="#D6FAF2">' . $data[$i] . '</td>' : '<td bgcolor="#D6DEFA">&nbsp;</td>';
-
+				}
 				$html .= '</tr>';
 			}
 		}
