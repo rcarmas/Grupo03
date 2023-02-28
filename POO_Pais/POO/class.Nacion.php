@@ -1,8 +1,8 @@
 
 <?php
 	abstract class Nacion{
-		private $NombrePais;   // Nombre del Pais
-		private $NumProv;      // numero de Provincias
+		private $NombrePais;   
+		private $NumProv;      
 		
 		
 	    

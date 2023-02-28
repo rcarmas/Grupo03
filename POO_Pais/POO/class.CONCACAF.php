@@ -6,9 +6,8 @@ include_once('interface.Organizacion.php');
 class CONCACAF extends Pais implements Organizacion
 {
 
-  private $campeon;      // LA CARA
-  private $subcampeon;   // Numero total de ciudades que tiene un pais
-  private $anio;
+  private $campeon;      
+  private $subcampeon;   
 
   // CONSTRUCTOR
   function __construct($anio, $campeon, $subcampeon, $NomPais, $data)

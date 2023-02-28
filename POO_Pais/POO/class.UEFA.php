@@ -6,9 +6,9 @@ include_once('interface.Organizacion.php');
 class UEFA extends Pais implements Organizacion
 {
 
-  private $campeon;      // LA CARA
+  private $campeon;      
   private $subcampeon;
-  private $anio;   // Numero total de ciudades que tiene un pais
+  private $anio;  
 
 
   // CONSTRUCTOR

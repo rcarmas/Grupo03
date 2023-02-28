@@ -37,25 +37,14 @@
 
 	$ArrayObj = [$objUEFA, $objCONCACAF, $objFIFA];
 
-
-	//ECUADOR
 	for ($i = 0; $i < count($ArrayObj); $i++) {
 		$html = '<h2>';
 		$html .= $ArrayObj[$i]->GetNombPais() . '</h2>';
 		echo $html;
 
-		// IMPRIME EL NUMERO DE CANTONES
 		$cara = $ArrayObj[$i]->GetCiudades();
 
-		/*
-	echo "<pre>";
-    	print_r($cara);
-	echo "</pre>";  
-	*/
-
 		$ArrayObj[$i]->CalcularMaxColum($cara);
-		//echo "NUMERO DE PROVINCIAS: " . count($cara) . "<br>";
-		//echo "NUMERO DE CANTONES: " . $objOrganizaciones[$i]->GetNumCuidades() . "<br>";	
 
 		//IMPRIMIR LA TABLA DE DATOS
 		$ArrayObj[$i]->imprimirONG();
