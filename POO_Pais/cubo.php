@@ -93,3 +93,28 @@
 		'ITALIA' => $ciudadesITA,
 		'HOLANDA' => $ciudadesHOL
 	);
+
+
+	$champions = array(
+		"2018" => array("Real Madrid", "Liverpool"),
+		"2019" => array("Liverpool", "Tottenham Hotspur"),
+		"2020" => array("Bayern Munich", "Paris Saint-Germain"),
+		"2021" => array("Chelsea", "Manchester City"),
+		"2022" => array("Real Madrid", "Liverpool")
+	);
+	
+	$concacaf_champions = array(
+		"2018" => array("Chivas Guadalajara", "Toronto FC"),
+		"2019" => array("Monterrey", "Tigres UANL"),
+		"2020" => array("Los Angeles FC", "Club América"),
+		"2021" => array("Monterrey", "Club América"),
+		"2022" => array("Club León", "CF Pachuca")
+	);
+
+	$mundial_clubes = array(
+		"2018" => array("Real Madrid", "Al Ain"),
+		"2019" => array("Liverpool", "Flamengo"),
+		"2020" => array("Bayern Munich", "Tigres UANL"),
+		"2021" => array("Al Ahly", "Palmeiras"),
+		"2022" => array("Bayern Munich", "Esperance de Tunis")
+	);

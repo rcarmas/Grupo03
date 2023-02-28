@@ -29,14 +29,11 @@
 
 	// INDICES NUMERICOS
 
-
-	$objECU = new Pais($titulo[0], $ciudadesECU);
-	$objUSA = new Pais($titulo[1], $ciudadesUSA);
-	$objARG = new Pais($titulo[2], $ciudadesARG);
-	$objCOL = new Pais($titulo[3], $ciudadesCOL);
-	$objUEFA = new UEFA('Real Madrid', 'Liverpool', $organizaciones[0], $PaisesUEFA);
-	$objCONCACAF = new CONCACAF('Seattle Sounders', 'Pumas', $organizaciones[1], $PaisesCONCACAF);
-	$objFIFA = new FIFA('Real Madrid', 'Al Hilal', $organizaciones[2], $PaisesFIFA);
+	$year = rand(2018, 2022);
+	
+	$objUEFA = new UEFA($year, $champions[$year][0], $champions[$year][1], $organizaciones[0], $PaisesUEFA);
+	$objCONCACAF = new CONCACAF($year, $concacaf_champions[$year][0], $concacaf_champions[$year][1], $organizaciones[1], $PaisesCONCACAF);
+	$objFIFA = new FIFA($year, $mundial_clubes[$year][0], $mundial_clubes[$year][1], $organizaciones[2], $PaisesFIFA);
 
 	$ArrayObj = [$objUEFA, $objCONCACAF, $objFIFA];
 
